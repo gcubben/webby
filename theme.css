@@ -22,6 +22,7 @@
   .row {
     display: inline-flex;
     justify-content: space-around;
+    width: 100%;
   }
   .center {
     display: flex;
@@ -55,4 +56,47 @@
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 4px;
+  }
+
+/*slider css values*/
+  .slider {
+    width:100%;
+    height: 450px;
+    max-width: 600px;
+    position: relative;
+    overflow: hidden;
+  }
+  .slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 0.5s;
+  }
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    z-index: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 18px;
+  }
+  .btn:active {
+    transform: scale(1.1);
+  }
+  .btn-prev {
+    top: 45%;
+    left: 2%;
+  }
+  .btn-next {
+    top: 45%;
+    right: 2%;
   }
