@@ -5,16 +5,30 @@
 </head>
 <style>
   body {
-    background-image: url("background-2.png");
-    background-origin: border-box;
-    background-size: 100% 100%;
+    background-image: url("../pics/bottom.jpg");
+    background-origin: padding-box;
+    background-position: bottom;
+    background-size: 40%;
     background-repeat: no-repeat;
-
-/*    height: 300vh;*/
+  }
+  img {
+    max-height: 100%;
+    z-index: -1;
+    position: relative;
   }
 </style>
 
 <body>
+  <! --- these are the background images --->
+  <div style="position: absolute; left: 0; top: 0; height: 100vh;">
+    <img src="../pics/left.jpg">
+  </div>
+<!--   <div style="position: absolute; bottom: 0; left: 30%;">
+    <img src="../pics/bottom.jpg" style="max-width: 50%;">
+  </div> -->
+  <div style="position: absolute; right: 0; top: 0; height: 100vh">
+    <img src="../pics/right.jpg">
+  </div>
   <! --- this is the menu ---->
   <nav class="menu center">
     <div>
@@ -24,8 +38,8 @@
       <ul>
         <li><a href="index.html" class="button">home</a></li>
         <li><a href="about me.html" class="button">about me</a></li>
-        <li><a href="marketing.html" class="button">marketing</a></li>
-        <li><a href="music.html" class="button">music</a></li>
+        <li><a href="seeing is believing.html" class="button">seeing is believing</a></li>
+        <li><a href="reading is fundamental.html" class="button">reading is fundamental</a></li>
       </ul>
     </div>
   </nav>
@@ -33,14 +47,13 @@
   <! --- this is the main content ---->
   <main>
     <div class="center" style="margin-top: 1em;">
-      <div style="width: 50%">
+      <div style="width: 50%; font-size: 1.5em;">
         <p>
-        woohoo! welcome to my website 
+        woohoo! welcome to my website
+        </p> 
         <p>
         i'm georgie, a recent grad looking to start my full-time journey in the noble and selfless profession of advertising. i write, i design, i obsess, and if you're not hooked yet, i promise the bait looks tastier in the next pages.   
         </p>
-        <p>
-        <p>
         <p>
           no puppies were harmed in the making of this website.
         </p>

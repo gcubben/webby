@@ -1,0 +1,91 @@
+<html>
+ <head>
+  <title>Marketing</title>
+  <link href="theme.css" rel="stylesheet" />
+  <script src="slider.js"></script>
+ </head>
+ <style>
+  p {
+    font-size: 2rem;
+    flex-basis: 33%;
+  }
+  .right {
+    text-align: right;
+  }
+  .left {
+    text-align: left;
+  }
+ </style>
+ <body>
+     <nav class="menu center">
+    <div>
+      <header>
+        <h1>seeing is believing</h1>
+      </header>
+      <ul>
+        <li><a href="index.html" class="button">home</a></li>
+        <li><a href="about me.html" class="button">about me</a></li>
+        <li><a href="seeing is believing.html" class="button">seeing is believing</a></li>
+        <li><a href="reading is fundamental.html" class="button">reading is fundamental</a></li>
+      </ul>
+    </div>
+  </nav>
+
+   <main>
+    <div style="margin-top: 1em;">
+      <div class="row" style="align-items: center;">
+        <p class="right"> logo design for Oral Communication Lab at Duke </p>
+          <div class="slider" id="slider1">
+            <div class="slide">
+              <img src="../arc pics/7.png">
+            </div>
+            <div class="slide">
+              <img src="../arc pics/13.png">
+            </div>
+            <div class="slide">
+              <img src="../arc pics/14.png">
+            </div>
+            <div class="slide">
+              <img src="../arc pics/15.png">
+            </div>
+            <div class="slide">
+              <img src="../arc pics/16.png">
+            </div>
+            <button class="btn btn-next">></button>
+            <button class="btn btn-prev"><</button>
+          </div>
+      </div>
+      <div class="row" style="align-items: center; margin-top: 2em;">
+        <div class="slider" id="slider2">
+            <div class="slide">
+              <img src="../arc pics/arc ad 1.png">
+            </div>
+            <div class="slide">
+              <img src="../arc pics/post midterm checklist.png">
+            </div>
+            <div class="slide">
+              <img src="../arc pics/totes_planner.png">
+            </div>
+            <div class="slide">
+              <img src="../arc pics/totes_bag.jpeg">
+            </div>
+            <div class="slide">
+              <img src="../arc pics/long_poster.png">
+            </div>
+            <button class="btn btn-next">></button>
+            <button class="btn btn-prev"><</button>
+          </div>
+        <p class="left">marketing graphics for Duke ARC</p>
+      </div>
+      <div class="row" style="align-items: center; margin-top: 2em;">
+          <p class="right">DJ tag design</p>
+          <img src="../arc pics/dj_mouse.jpg" style="max-width: 600px; object-fit: contain;">
+      </div>
+    </div>
+   </main>
+ </body>
+  <script type="text/javascript">
+   let slider1 = new Slider("#slider1", 4);
+   let slider2 = new Slider("#slider2", 4);
+ </script>
+</html>

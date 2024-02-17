@@ -2,9 +2,10 @@
 // Adapted from https://blog.logrocket.com/build-image-carousel-from-scratch-vanilla-javascript/
 
 class Slider {
-	constructor(slider) {
+	constructor(slider, timer=0) {
 		// TODO: Add error handling
 		this.slider = slider;
+		this.timer = timer;
 		this.sliderNode = document.querySelector(slider);
 		this.slides = this.sliderNode.querySelectorAll(".slide");
 		// loop through slides and set each slides translateX property to index * 100% 
@@ -15,11 +16,34 @@ class Slider {
 	    this.maxSlide = this.slides.length - 1;
 	    this.nextSlide = this.nextSlide.bind(this);
 	    this.prevSlide = this.prevSlide.bind(this);
+	    this.autoSlide = this.autoSlide.bind(this);
 	    // next/prev Btn
 	    this.nextBtn = this.sliderNode.querySelector(".btn-next");
 	    this.prevBtn = this.sliderNode.querySelector(".btn-prev");
 	    this.nextBtn.addEventListener("click", this.nextSlide);
 	    this.prevBtn.addEventListener("click", this.prevSlide);
+	    if (this.timer)
+	    	this.startAutoSlide();
+	}
+
+	autoSlide() {
+		// called by a timeout function, advances to next picture if mouse not over slider
+		if (!this.sliderNode.matches("div:hover")) {
+			this.nextSlide();
+		}
+	}
+
+	startAutoSlide() {
+		if (!this.timerID) {
+			this.timerID = setInterval(this.autoSlide, this.timer * 1000);
+		}
+	}
+
+	stopAutoSlide() {
+		if (this.timerID) {
+			clearInterval(this.timerID);
+			this.timerID = null;
+		}
 	}
 
 	nextSlide() {

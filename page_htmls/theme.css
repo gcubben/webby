@@ -1,15 +1,29 @@
 @font-face {
     font-family: panton;
-    src: url("Panton-SemiBold.ttf");
+    src: url("../fonts/Panton-SemiBold.ttf");
   }
-  @font-face {
+ @font-face {
     font-family: panton;
-    src: url("Panton-ExtraBold.ttf");
+    src: url("../fonts/Panton-ExtraBold.ttf");
     font-weight: bold;
   }
+  @font-face {
+    font-family: simvoni;
+    src: url("../fonts/Simvoni.otf");
+  }
+ @font-face {
+    font-family: simvoni;
+    src: url("../fonts/Simvoni-Bold.otf");
+    font-weight: bold;
+  }
+   @font-face {
+    font-family: simvoni;
+    src: url("../fonts/Simvoni-Italic.otf");
+    font-style: italic;
+  }
   body {
-    margin: 3em;
-    font-family: panton;
+    margin: 0em 3em 0 3em;
+    font-family: simvoni;
   }
   h1 {
     text-align: center; 
