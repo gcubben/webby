@@ -78,8 +78,19 @@
         <p class="left">marketing graphics for Duke ARC</p>
       </div>
       <div class="row" style="align-items: center; margin-top: 2em;">
-          <p class="right">DJ tag design</p>
-          <img src="../arc pics/dj_mouse.jpg" style="max-width: 600px; object-fit: contain;">
+        <p class="right">music promo graphics</p>
+         <div class="slider" id="slider3">
+            <div class="slide">
+              <img src="../arc pics/dj_mouse.jpg">
+            </div>
+            <div class="slide">
+              <img src="../arc pics/unionpool.png">
+            </div>
+            <button class="btn btn-next">></button>
+            <button class="btn btn-prev"><</button>
+          </div>
+  
+          <!--<img src="../arc pics/dj_mouse.jpg" style="max-width: 600px; object-fit: contain;"> -->
       </div>
     </div>
    </main>
@@ -87,5 +98,6 @@
   <script type="text/javascript">
    let slider1 = new Slider("#slider1", 2.5);
    let slider2 = new Slider("#slider2", 2.5);
+   let slider3 = new Slider("#slider3", 2.5);
  </script>
 </html>
