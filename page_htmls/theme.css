@@ -80,14 +80,6 @@
     display: inline;
   }
   .button {
-    a:hover {
-      border: solid 1 black;
-      color:black;
-    }
-    a:active {
-      border: solid 1 black;
-      color:black;
-    }
     background-color: black;
     border: none;
     color: white;
@@ -100,6 +92,14 @@
     cursor: pointer;
     border-radius: 50px;
   }
+  .button:hover{
+      border: solid 1 black;
+      color:black;
+    }
+  .button:active{
+      border: solid 1 black;
+      color:black;
+    }
 
 /*slider css values*/
   .slider {
