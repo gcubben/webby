@@ -76,12 +76,12 @@
     background-color: black;
     border: none;
     color: white;
-    padding: 40px;
+    padding: 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
-    margin: 12px 6px;
+    margin: 20px 6px;
     cursor: pointer;
     border-radius: 50px;
   }
