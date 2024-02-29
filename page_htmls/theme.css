@@ -1,15 +1,15 @@
   @font-face {
   font-family: Alvilde;
-  src: url("../fonts/alvilde.regular.ttf");
+  src: url("../fonts/aller.regular.ttf");
   }
   @font-face {
     font-family: Alvilde;
-    src: url("../fonts/alvilde.regular.ttf");
+    src: url("../fonts/aller.display.ttf");
     font-weight: bold;
   }
   @font-face {
     font-family: Alvilde;
-    src: url("../fonts/alvilde.regular.ttf");
+    src: url("../fonts/aller.regular.ttf");
     font-style: italic;
   }
   @font-face {
