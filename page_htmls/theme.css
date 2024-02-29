@@ -84,7 +84,7 @@
     border: none;
     color: white;
     padding-top: 17px;
-    padding-bottom: 7px;
+    padding-bottom: 17px;
     padding-left: 17px;
     padding-right: 17px;
     text-align: center;
@@ -129,7 +129,7 @@
     position: absolute;
     width: 40px;
     height: 40px;
-    padding: 10px;
+    padding: 5px;
     border: none;
     border-radius: 50%;
     z-index: 10px;
