@@ -1,15 +1,15 @@
   @font-face {
-  font-family: aller;
-  src: url("../fonts/aller.regular.ttf");
+  font-family: Andada;
+  src: url("../fonts/AndadaPro-Regular.ttf");
   }
   @font-face {
-    font-family: aller;
-    src: url("../fonts/aller.display.ttf");
+    font-family: Andada;
+    src: url("../fonts/AndadaPro-Bold.ttf");
     font-weight: bold;
   }
   @font-face {
-    font-family: aller;
-    src: url("../fonts/aller.regular.ttf");
+    font-family: Andada;
+    src: url("../fonts/AndadaPro-Italic.ttf");
     font-style: italic;
   }
   @font-face {
@@ -43,13 +43,13 @@
     text-align: center; 
     font-size: 3em;
     color: black;
-    font-family: aller;
+    font-family: Andada;
   }
   h2 {
     text-align: left;
     color: black;
     font-style: bold;
-    font-family: aller;
+    font-family: Andada;
   }
   .container {
     margin: 3em;
