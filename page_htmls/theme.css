@@ -82,12 +82,12 @@
     background-color: black;
     border: none;
     color: white;
-    padding: 30px;
+    padding: 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
-    margin: 20px 6px;
+    margin: 20px 20px;
     cursor: pointer;
     border-radius: 50px;
   }
