@@ -1,14 +1,14 @@
   @font-face {
-  font-family: Alvilde;
+  font-family: aller;
   src: url("../fonts/aller.regular.ttf");
   }
   @font-face {
-    font-family: Alvilde;
+    font-family: aller;
     src: url("../fonts/aller.display.ttf");
     font-weight: bold;
   }
   @font-face {
-    font-family: Alvilde;
+    font-family: aller;
     src: url("../fonts/aller.regular.ttf");
     font-style: italic;
   }
@@ -37,19 +37,19 @@
   }
   body {
     margin: 0em 3em 0 3em;
-    font-family: Alvilde;
+    font-family: aller;
   }
   h1 {
     text-align: center; 
     font-size: 2em;
     color: black;
-    font-family: Alvilde;
+    font-family: aller;
   }
   h2 {
     text-align: left;
     color: black;
     font-style: bold;
-    font-family: Alvilde;
+    font-family: aller;
   }
   .container {
     margin: 3em;
