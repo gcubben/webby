@@ -1,15 +1,15 @@
   @font-face {
-  font-family: Arimo;
-  src: url("../fonts/Arimo-Regular.ttf");
+  font-family: Alvilde;
+  src: url("../fonts/alvilde.regular.ttf");
   }
   @font-face {
-    font-family: Arimo;
-    src: url("../fonts/Arimo-Bold.ttf");
+    font-family: Alvilde;
+    src: url("../fonts/alvilde.regular.ttf");
     font-weight: bold;
   }
   @font-face {
-    font-family: Arimo;
-    src: url("../fonts/Arimo-Italic.ttf");
+    font-family: Alvilde;
+    src: url("../fonts/alvilde.regular.ttf");
     font-style: italic;
   }
   @font-face {
@@ -38,7 +38,7 @@
   body {
     margin: 0em 3em 0 3em;
     font-size: 1em;
-    font-family: Arimo;
+    font-family: Alvilde;
   }
   h1 {
     text-align: center; 
