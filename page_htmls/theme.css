@@ -37,7 +37,6 @@
   }
   body {
     margin: 0em 3em 0 3em;
-    font-size: 1em;
     font-family: Alvilde;
   }
   h1 {
@@ -47,7 +46,6 @@
   }
   h2 {
     text-align: left;
-    font-size: 1.2em;
     color: black;
     font-style: bold;
   }
