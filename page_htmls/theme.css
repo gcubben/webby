@@ -37,6 +37,7 @@
   }
   body {
     margin: 0em 3em 0 3em;
+    font-size: 1em;
     font-family: Arimo;
   }
   h1 {
@@ -46,7 +47,7 @@
   }
   h2 {
     text-align: left;
-    font-size: .8em;
+    font-size: 1.2em;
     color: black;
     font-style: bold;
   }
