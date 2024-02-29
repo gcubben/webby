@@ -80,6 +80,14 @@
     display: inline;
   }
   .button {
+    a:hover {
+      border: solid 1 black;
+      color:black;
+    }
+    a:active {
+      border: solid 1 black;
+      color:black;
+    }
     background-color: black;
     border: none;
     color: white;
