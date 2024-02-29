@@ -43,11 +43,13 @@
     text-align: center; 
     font-size: 2em;
     color: black;
+    font-family: Alvilde;
   }
   h2 {
     text-align: left;
     color: black;
     font-style: bold;
+    font-family: Alvilde;
   }
   .container {
     margin: 3em;
