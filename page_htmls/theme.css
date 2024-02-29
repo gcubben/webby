@@ -1,4 +1,18 @@
-@font-face {
+  @font-face {
+  font-family: Arimo;
+  src: url("../fonts/Arimo-Regular.ttf");
+  }
+  @font-face {
+    font-family: Arimo;
+    src: url("../fonts/Arimo-Bold.ttf");
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: Arimo;
+    src: url("../fonts/Arimo-Italic.ttf");
+    font-style: italic;
+  }
+  @font-face {
     font-family: panton;
     src: url("../fonts/Panton-SemiBold.ttf");
   }
@@ -23,11 +37,11 @@
   }
   body {
     margin: 0em 3em 0 3em;
-    font-family: simvoni;
+    font-family: Arimo;
   }
   h1 {
     text-align: center; 
-    font-size: 2.5em;
+    font-size: 2em;
     color: black;
   }
   .container {
