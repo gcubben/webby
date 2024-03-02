@@ -12,6 +12,31 @@
     font-size:1em;
     text-align: center;
   }
+
+  .imageBox {
+  position: relative;
+  float: left;
+}
+
+.imageBox .hoverImg {
+  position: relative;
+  display: none;
+
+}
+
+.imageBox:hover .hoverImg {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  align: center;
+  object-fit: contain;;
+}
+
+
+
  </style>
  <body>
   <nav class="menu center">
@@ -35,26 +60,49 @@
       </div>
       <div class="row">
           <figure>
-            <a href="../reading/Big Blood -  In My Head PR.pdf">
-              <img src="../reading/thumbnails/big_blood.png">
-            </a>
-            <figcaption>In My Head PR</figcaption>
-          </figure>
+            <div class="imageBox">
+              <div class="imageInn"> 
+                <a href="../reading/Big Blood -  In My Head PR.pdf">
+                  <img src="../reading/thumbnails/11.jpg">
+              <div class="hoverImg center">
+                <img src="../reading/thumbnails/12.jpg">
+              </a>
+            </div>
+        <figcaption>In My Head PR</figcaption>
+      </figure>
           <figure>
-            <a href="../reading/Lady Lamb 10 Years PR.pdf">
-              <img src="../reading/thumbnails/lady_lamb.jpg">
+            <div class="imageBox">
+              <div class="imageInn"> 
+                <a href="../reading/Lady Lamb 10 Years PR.pdf">
+                  <img src="../reading/thumbnails/6.jpg">
+              <div class="hoverImg center">
+                <img src="../reading/thumbnails/8.jpg">
+              </a>
+            </div>
             </a>
-            <figcaption>Lady Lamb 10 Year PR</figcaption>
-          </figure>
+          <figcaption>Lady Lamb 10 Year PR</figcaption>
+        </figure>
           <figure>
+            <div class="imageBox">
+              <div class="imageInn"> 
             <a href="../reading/Lisel Blades Of Grass MV PR.pdf">
-              <img src="../reading/thumbnails/lisel.png">
+              <img src="../reading/thumbnails/4.jpg">
+            <div class="hoverImg center">
+              <img src="../reading/thumbnails/5.jpg">
             </a>
+            </div>
+             </a>
             <figcaption>Blades of Grass PR</figcaption>
           </figure>
           <figure>
+            <div class="imageBox">
+              <div class="imageInn"> 
             <a href="../reading/Lady Lamb Crane Your Neck (Still Hungry Version) PR.pdf">
-              <img src="../reading/thumbnails/still_hungry.jpg">
+              <img src="../reading/thumbnails/2.jpg">
+              <div class="hoverImg center">
+              <img src="../reading/thumbnails/7.jpg">
+            </a>
+          </div>
             </a>
             <figcaption>Crane Your Neck (Still Hungry Version) PR</figcaption>
           </figure>
@@ -64,14 +112,26 @@
       </div>
       <div class="row">
           <figure>
+             <div class="imageBox">
+              <div class="imageInn"> 
             <a href="../reading/mlr.pdf">
-              <img src="../reading/thumbnails/kickingaway.png">
+              <img src="../reading/thumbnails/9.jpg">
+            <div class="hoverImg center">
+              <img src="../reading/thumbnails/3.jpg">
+            </a>
+          </div>
             </a>
             <figcaption>Kicking Away Album Review
           </figure>
           <figure>
+            <div class="imageBox">
+              <div class="imageInn"> 
             <a href="../reading/wer.pdf">
-              <img src="../reading/thumbnails/eyemusic.png">
+              <img src="../reading/thumbnails/10.jpg">
+            <div class="hoverImg center">
+              <img src="../reading/thumbnails/1.jpg">
+            </a>
+          </div>
             </a>
             <figcaption>Eye Music Album Review</figcaption>
           </figure>
