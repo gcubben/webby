@@ -2,20 +2,19 @@
 <head>
   <title>Georgie's Portfolio</title>
   <link href="page_htmls/theme.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 </head>
 <style>
-  body {
-    background-image: url("pics/bottom.png");
-    background-origin: padding-box;
-    background-position: bottom;
-    background-size: 40%;
-    background-repeat: no-repeat;
-  }
   img {
     max-height: 100%;
     z-index: -1;
     position: relative;
   } 
+  @media only screen and (max-width: 700px) {
+    .phone {
+      display: none;
+    }
+  }
 </style>
 
 <body>
@@ -26,7 +25,7 @@
 <!--   <div style="position: absolute; bottom: 0; left: 30%;">
     <img src="../pics/bottom.jpg" style="max-width: 50%;">
   </div> -->
-  <div style="position: absolute; right: 0; top: 0; height: 100vh; z-index: -1">
+  <div class="phone" style="position: absolute; right: 0; top: 0; height: 100vh; z-index: -1">
     <img src="pics/right1.png">
   </div>
   <! --- this is the menu ---->
@@ -48,13 +47,13 @@
   <main>
     <div class="center">
       <div style="width: 50%; font-size: 1.7em; padding: .0001em; background: white">
-        <p class="center">
+        <p class="center" style="margin-top: 0em;">
         WOOHOO, welcome!
         </p> 
         <p class="center">
         i'm georgie, a recent Duke grad ready to jumpstart my full-time journey in the noble and selfless profession of advertising. i write, design, and obsess. if you're not hooked yet, i promise the doodles aren't the whole bait.   
         </p>
-        <p class="center" style="font-size: 1.2rem;">
+        <p class="center" style="font-size: 1.2rem; margin-bottom: 0em;">
           no puppies were harmed in the making of this website
         </p>
       </div>
