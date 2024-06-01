@@ -45,6 +45,15 @@
 
   @media only screen and (max-width: 600px) {
 
+      /* 
+         Hides the bottom of the image thats off screen 
+             so the page doesnt scroll 
+       */
+    html, body {
+      max-height: 100vh;
+      overflow: hidden;
+    }
+
     /* Hide the right image */
     .phone {
       display: none;
@@ -52,8 +61,7 @@
 
     /* Move the left image down and make it a bit smaller */
     .background_image>img{
-        padding-top: 30%;
-        max-height: 80%;
+        padding-top: 20%;
     }
 
     /* Make the main conent font a bit smaller and 
@@ -67,16 +75,18 @@
        add some padding so it is less likely to overlap with the content 
      */
     .footer {
-      position: relative;
-      bottom:0;
-      padding-top: 10px;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      padding: 10px;
+      text-align: center;
     }
 
     /* Make button text smaller so they fit better 
        reduce the margin so they are a bit closer 
      */
     .button {
-      font-size: 15px;
+      font-size: 20px;
       margin: 10px 5px;
     }
   }
