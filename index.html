@@ -43,22 +43,41 @@
     bottom:0;
   }
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 600px) {
 
+    /* Hide the right image */
     .phone {
       display: none;
     }
 
-    div.main_content {
-      width: 100%; 
-      font-size: 1.7em;
+    /* Move the left image down and make it a bit smaller */
+    .background_image>img{
+        padding-top: 30%;
+        max-height: 80%;
     }
 
+    /* Make the main conent font a bit smaller and 
+       take up the full width*/
+    div.main_content {
+      width: 100%; 
+      font-size: 1.5em;
+    }
+
+    /* Let the footer go off screen if needed 
+       add some padding so it is less likely to overlap with the content 
+     */
     .footer {
-      font-size: 1rem; 
       position: relative;
       bottom:0;
       padding-top: 10px;
+    }
+
+    /* Make button text smaller so they fit better 
+       reduce the margin so they are a bit closer 
+     */
+    .button {
+      font-size: 15px;
+      margin: 10px 5px;
     }
   }
 </style>
