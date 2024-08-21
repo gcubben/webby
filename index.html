@@ -5,21 +5,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 </head>
 <style>
+  .background_image {
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+    height: 100vh; 
+    z-index: -1;
+  }
+
   img {
     max-height: 100%;
     z-index: -1;
     position: relative;
   } 
-  @media only screen and (max-width: 700px) {
+  .woohoo {
+    margin-top: 0em; 
+    padding: .0001em; 
+    background: white;
+  }
+  div.main_content {
+    width: 50%; 
+    font-size: 1.7em;
+  }
+  p.main_content {
+    padding: .0001em; 
+    background: white; 
+    text-align: center;
+  }
+  .footer {
+    font-size: 1rem; 
+    margin-top: 0em; 
+    margin-bottom: .05em; 
+    padding: .0001em; 
+    background: white; 
+    position:absolute; 
+    right:1em; 
+    bottom:0;
+  }
+
+  @media only screen and (max-width: 600px) {
+
+      /* 
+         Hides the bottom of the image thats off screen 
+             so the page doesnt scroll 
+       */
+    html, body {
+      max-height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Hide the right image */
     .phone {
       display: none;
+    }
+
+    /* Move the left image down and make it a bit smaller */
+    .background_image>img{
+        padding-top: 20%;
+    }
+
+    /* Make the main conent font a bit smaller and 
+       take up the full width*/
+    div.main_content {
+      width: 100%; 
+      font-size: 1.5em;
+    }
+
+    /* Let the footer go off screen if needed 
+       add some padding so it is less likely to overlap with the content 
+     */
+    .footer {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Make button text smaller so they fit better 
+       reduce the margin so they are a bit closer 
+     */
+    .button {
+      font-size: 20px;
+      margin: 10px 5px;
     }
   }
 </style>
 
 <body>
   <! --- these are the background images --->
-  <div style="position: absolute; left: 0; top: 0; height: 100vh; z-index: -1;">
+  <div class="background_image">
     <img src="pics/left2.jpg">
   </div>
 <!--   <div style="position: absolute; bottom: 0; left: 30%;">
@@ -46,14 +121,12 @@
   <! --- this is the main content ---->
   <main>
     <div class="center">
-      <div style="width: 50%; font-size: 1.7em;">
-        <p class="center" style="margin-top: 0em; padding: .0001em; background: white">
-        WOOHOO, welcome!
-        </p> 
-        <p class="center" style="padding: .0001em; background: white; text-align: center">
+      <div class="main_content">
+          <p class="center woohoo"> WOOHOO, welcome! </p> 
+        <p class="center main_content">
         i'm georgie, a recent Duke grad ready to jumpstart my full-time journey in the noble and selfless profession of advertising. i write, design, and obsess. if you're not hooked yet, i promise the doodles aren't the whole bait.   
         </p>
-        <p style="font-size: 1rem; margin-top: 0em; margin-bottom: .05em; padding: .0001em; background: white; position:absolute; right:1em; bottom:0">
+        <p class="footer">
         no puppies were harmed in the making of this website
         </p>
       </div>
