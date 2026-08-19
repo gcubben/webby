@@ -1,41 +1,55 @@
-<html>
- <head>
-  <title>About Me</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>about me — Georgie Ubben | Junior Strategist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,700;1,6..12,400&display=swap" rel="stylesheet" />
   <link href="theme.css" rel="stylesheet" />
- </head>
- <style>
-  p {
-    font-size: 1.65em;
-  }
- </style>
-  <nav class="menu center">
-    <div>
-      <header>
-        <h1>About Me</h1>
-      </header>
-      <ul>
-        <li><a href="../index.html" class="button">Home</a></li>
-        <li><a href="about me.html" class="button">About Me</a></li>
-        <li><a href="reading is fundamental.html" class="button">Work</a></li>
-      </ul>
-    </div>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-left">
+      <a href="../index.html" class="nav-link">work</a>
+      <a href="articles.html" class="nav-link">reader's corner</a>
+    </nav>
+    <a href="../index.html" class="site-title">Georgie Ubben | Junior Strategist</a>
+    <nav class="nav-right">
+      <a href="about me.html" class="nav-link is-active">about me</a>
+      <a href="past-life.html" class="nav-link">works from a past life</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu"><span></span></button>
+  </header>
+  <nav class="mobile-nav">
+    <a href="../index.html" class="nav-link">work</a>
+    <a href="articles.html" class="nav-link">reader's corner</a>
+    <a href="about me.html" class="nav-link is-active">about me</a>
+    <a href="past-life.html" class="nav-link">works from a past life</a>
   </nav>
 
-  <main>
-    <div style="margin-top: 1em; margin-right: 3em; margin-left: 3em;">
-      <div class="row">
-        <img src="../pics/aboutme.jpg" style="max-height: 600px; position: relative; top:-50px; z-index: -1;">
-        <div style="margin-left: 3em; margin-right: 10em;">
-          <p>
-            Hey! You wanted to know more? :,)
-          <p/>
-          <p>
-           I've been known to strategize, manage accounts, write ads, and drink copious amounts of seltzer water. I love redirects and being around people who are also insatiably curious. My work has spanned industries such as CPG, dining, academia, indie music, and more. Ready when you are.    
-          </p>
-        </div>
+  <main class="about-wrap">
+    <img class="about-photo" src="../RPK Portrait GU 3x2.png" alt="Georgie Ubben" />
+    <p class="kicker">Hey! You wanted to know more? :,)</p>
+    <p>
+      I’ve been known to strategize, manage accounts, write ads, and drink copious amounts of seltzer water. I love redirects and being around people who are also insatiably curious. My work has spanned industries such as CPG, dining, academia, indie music, and more. Ready when you are.
+    </p>
+    <p class="footnote">no puppies were harmed in the making of this website</p>
+
+    <section class="about-press">
+      <h2>Press</h2>
+      <div class="past-images">
+        <a href="../press/CommunicationArtsFeature.pdf">
+          <img src="../press/ca-cover.png" alt="Communication Arts Feature" />
+        </a>
+        <a href="../press/graphis-article.pdf">
+          <img src="../press/graphis-cover.png" alt="Graphis Case Study" />
+        </a>
       </div>
-    </div>
+    </section>
   </main>
 
- </body>
+  <script src="nav.js"></script>
+</body>
 </html>

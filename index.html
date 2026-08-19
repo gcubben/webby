@@ -1,136 +1,65 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Georgie's Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Georgie Ubben | Junior Strategist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,700;1,6..12,400&display=swap" rel="stylesheet" />
   <link href="page_htmls/theme.css" rel="stylesheet" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 </head>
-<style>
-  .background_image {
-    position: absolute; 
-    left: 0; 
-    top: 0; 
-    height: 100vh; 
-    z-index: -1;
-  }
-
-  img {
-    max-height: 100%;
-    z-index: -1;
-    position: relative;
-  } 
-  .woohoo {
-    margin-top: 0em; 
-    padding: .0001em; 
-    background: white;
-  }
-  div.main_content {
-    width: 50%; 
-    font-size: 1.7em;
-  }
-  p.main_content {
-    padding: .0001em; 
-    background: white; 
-    text-align: center;
-  }
-  .footer {
-    font-size: 1rem; 
-    margin-top: 0em; 
-    margin-bottom: .05em; 
-    padding: .0001em; 
-    background: white; 
-    position:absolute; 
-    right:1em; 
-    bottom:0;
-  }
-
-  @media only screen and (max-width: 600px) {
-
-      /* 
-         Hides the bottom of the image thats off screen 
-             so the page doesnt scroll 
-       */
-    html, body {
-      max-height: 100vh;
-      overflow: hidden;
-    }
-
-    /* Hide the right image */
-    .phone {
-      display: none;
-    }
-
-    /* Move the left image down and make it a bit smaller */
-    .background_image>img{
-        padding-top: 20%;
-    }
-
-    /* Make the main conent font a bit smaller and 
-       take up the full width*/
-    div.main_content {
-      width: 100%; 
-      font-size: 1.5em;
-    }
-
-    /* Let the footer go off screen if needed 
-       add some padding so it is less likely to overlap with the content 
-     */
-    .footer {
-      position: fixed;
-      bottom: 0;
-      right: 0;
-      padding: 10px;
-      text-align: center;
-    }
-
-    /* Make button text smaller so they fit better 
-       reduce the margin so they are a bit closer 
-     */
-    .button {
-      font-size: 20px;
-      margin: 10px 5px;
-    }
-  }
-</style>
-
 <body>
-  <! --- these are the background images --->
-  <div class="background_image">
-    <img src="pics/left2.jpg">
-  </div>
-<!--   <div style="position: absolute; bottom: 0; left: 30%;">
-    <img src="../pics/bottom.jpg" style="max-width: 50%;">
-  </div> -->
-  <div class="phone" style="position: absolute; right: 0; top: 0; height: 100vh; z-index: -1">
-    <img src="pics/right1.png">
-  </div>
-  <! --- this is the menu ---->
-  <nav class="menu center">
-    <div>
-      <header>
-        <h1>Georgie Ubben</h1>
-      </header>
-      <ul>
-        <li><a href="index.html" class="button">Home</a></li>
-        <li><a href="page_htmls/about me.html" class="button">About Me</a></li>
-        <li><a href="page_htmls/reading is fundamental.html" class="button">Work</a></li>
-      </ul>
-    </div>
+  <header class="site-header">
+    <nav class="nav-left">
+      <a href="index.html" class="nav-link is-active">work</a>
+      <a href="page_htmls/articles.html" class="nav-link">reader's corner</a>
+    </nav>
+    <a href="index.html" class="site-title">Georgie Ubben | Junior Strategist</a>
+    <nav class="nav-right">
+      <a href="page_htmls/about me.html" class="nav-link">about me</a>
+      <a href="page_htmls/past-life.html" class="nav-link">works from a past life</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu"><span></span></button>
+  </header>
+  <nav class="mobile-nav">
+    <a href="index.html" class="nav-link is-active">work</a>
+    <a href="page_htmls/articles.html" class="nav-link">reader's corner</a>
+    <a href="page_htmls/about me.html" class="nav-link">about me</a>
+    <a href="page_htmls/past-life.html" class="nav-link">works from a past life</a>
   </nav>
 
-  <! --- this is the main content ---->
-  <main>
-    <div class="center">
-      <div class="main_content">
-          <p class="center woohoo"> WOOHOO, welcome! </p> 
-        <p class="center main_content">
-        I'm Georgie, a strategist enjoying my full-time journey in the noble and selfless profession of advertising. I research, delineate, and obsess. If you're not hooked yet, I promise the doodles aren't the bait.   
-        </p>
-        <p class="footer">
-        no puppies were harmed in the making of this website
-        </p>
-      </div>
-    </div>
+  <section class="page-intro">
+    <p>— Hi, I’m Georgie. I research, delineate, and obsess. Welcome.</p>
+  </section>
+
+  <main class="index-list">
+    <a class="index-item" href="page_htmls/case.html?n=1" style="background:#283492">
+      <img src="arc pics/ab1.JPG" alt="" />
+      <div class="index-item-overlay"><h2>Case 1</h2></div>
+    </a>
+    <a class="index-item" href="page_htmls/case.html?n=2" style="background:#747c80">
+      <img src="arc pics/fc1.png" alt="" />
+      <div class="index-item-overlay"><h2>Case 2</h2></div>
+    </a>
+    <a class="index-item" href="page_htmls/case.html?n=3" style="background:#c4b8a5">
+      <img src="arc pics/arcweb1.png" alt="" />
+      <div class="index-item-overlay"><h2>Case 3</h2></div>
+    </a>
+    <a class="index-item" href="page_htmls/case.html?n=4" style="background:#1a1a1a">
+      <img src="press/ca-cover.png" alt="" />
+      <div class="index-item-overlay"><h2>Case 4</h2></div>
+    </a>
+    <a class="index-item" href="page_htmls/case.html?n=5" style="background:#4a6741">
+      <img src="arc pics/cg1.JPG" alt="" />
+      <div class="index-item-overlay"><h2>Case 5</h2></div>
+    </a>
+    <a class="index-item" href="page_htmls/case.html?n=6" style="background:#5c4033">
+      <img src="reading/thumbnails/r1.png" alt="" />
+      <div class="index-item-overlay"><h2>Case 6</h2></div>
+    </a>
   </main>
 
- </body>
+  <script src="page_htmls/nav.js"></script>
+</body>
 </html>
