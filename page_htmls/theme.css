@@ -140,7 +140,7 @@ a {
 .page-intro {
   max-width: 960px;
   margin: 0 auto;
-  padding: min(22vh, 250px) 24px min(24vh, 300px);
+  padding: min(22vh, 250px) 24px min(14vh, 140px);
   text-align: center;
 }
 
@@ -183,6 +183,10 @@ a {
   grid-template-columns: 1fr 1fr;
   gap: 0;
   width: 100%;
+}
+
+.index-item:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
 }
 
 .index-item {
@@ -276,6 +280,11 @@ a {
   letter-spacing: 0.04em;
   color: #444;
   background: var(--bg);
+}
+
+.home-work-label {
+  padding-top: 0;
+  padding-bottom: 32px;
 }
 
 /* ---------- About ---------- */
@@ -426,7 +435,54 @@ a {
   right: 2%;
 }
 
-/* ---------- Case placeholder ---------- */
+/* ---------- Case studies ---------- */
+
+.case-study {
+  padding-bottom: 120px;
+}
+
+.case-study .page-heading {
+  padding-bottom: 48px;
+}
+
+.case-copy {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.case-copy p {
+  margin: 0 0 20px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #1f1f1f;
+}
+
+.case-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.case-figure {
+  margin: 0 auto 48px;
+  padding: 0 var(--header-pad);
+  max-width: 1400px;
+}
+
+.case-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.case-figure.is-logo {
+  max-width: 480px;
+  padding: 0 24px;
+}
+
+.case-figure.is-logo img {
+  margin: 0 auto;
+}
 
 .case-page {
   max-width: 720px;
@@ -509,7 +565,7 @@ a {
   }
 
   .page-intro {
-    padding: 12vh 24px 14vh;
+    padding: 12vh 24px 10vh;
   }
 
   .past-images {
