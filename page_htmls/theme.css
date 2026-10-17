@@ -144,12 +144,13 @@ a {
   text-align: center;
 }
 
-.page-intro p {
+.page-intro h1 {
   margin: 0;
-  font-family: var(--intro-font);
-  font-size: clamp(22px, 3.2vw, 46px);
-  font-weight: 400;
-  line-height: 1.7;
+  font-family: var(--font);
+  font-size: clamp(28px, 4vw, 47px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
   color: #111;
 }
 
@@ -307,9 +308,11 @@ a {
 }
 
 .about-wrap .kicker {
-  font-family: var(--intro-font);
-  font-size: clamp(20px, 2.4vw, 32px);
-  line-height: 1.5;
+  font-family: var(--font);
+  font-size: clamp(28px, 4vw, 47px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
   margin: 0 auto 28px;
   max-width: none;
   text-align: center;
