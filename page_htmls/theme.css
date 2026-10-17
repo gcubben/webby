@@ -154,6 +154,11 @@ a {
   color: #111;
 }
 
+.page-intro h1 span {
+  display: block;
+  margin-top: 0.2em;
+}
+
 .page-heading {
   max-width: 960px;
   margin: 0 auto;
