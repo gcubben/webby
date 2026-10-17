@@ -343,8 +343,11 @@ a {
 
 .about-press h2 {
   margin: 0 0 28px;
-  font-size: clamp(20px, 2.2vw, 28px);
-  font-weight: 700;
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: #444;
 }
 
 /* ---------- Past life ---------- */
