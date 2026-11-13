@@ -296,50 +296,291 @@ a {
 
 /* ---------- About ---------- */
 
-.about-wrap {
-  max-width: 960px;
+.page-about {
+  --hot-pink: #ec2a8d;
+  --about-display: "Archivo Black", "Arial Black", "Helvetica Neue", sans-serif;
+  --about-text: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* The big name below replaces the small header title on this page */
+.page-about .site-title {
+  visibility: hidden;
+}
+
+.about-hero {
+  position: relative;
+  max-width: 1180px;
   margin: 0 auto;
-  padding: var(--page-header-top) 24px 120px;
-  text-align: center;
+  padding: 56px 40px 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-areas:
+    "name role"
+    "copy stage";
+  column-gap: clamp(32px, 6vw, 96px);
 }
 
-.about-photo {
-  width: auto;
-  max-width: min(300px, 70%);
-  max-height: 48vh;
+.about-name {
+  grid-area: name;
+  margin: 0 0 40px;
+  font-family: var(--about-display);
+  font-size: clamp(34px, 4.4vw, 62px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--black);
+}
+
+.about-role {
+  grid-area: role;
+  justify-self: end;
+  margin: 0.9em 0 0;
+  font-family: var(--about-display);
+  font-size: clamp(17px, 1.7vw, 23px);
+  line-height: 1;
+  color: var(--black);
+}
+
+.about-copy {
+  grid-area: copy;
+  max-width: 27em;
+  font-family: var(--about-text);
+  font-size: clamp(16px, 1.45vw, 19px);
+  line-height: 1.42;
+  color: var(--black);
+}
+
+.about-copy p {
+  margin: 0 0 1.35em;
+}
+
+.about-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.tie {
+  cursor: pointer;
+  border-radius: 2px;
+  transition: color 0.2s ease;
+}
+
+.tie:hover,
+.tie.is-active {
+  color: var(--hot-pink);
+}
+
+.tie:focus {
+  outline: none;
+}
+
+.tie:focus-visible {
+  outline: 1px dashed var(--hot-pink);
+  outline-offset: 3px;
+}
+
+/* Right column: portrait by default, article cards on hover */
+
+.about-stage {
+  grid-area: stage;
+  position: relative;
+  /* Height comes from the text column only; cards float over it */
+  contain: size;
+}
+
+.about-portrait {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: clamp(110px, 11.5vw, 150px);
   height: auto;
-  margin: 36px auto 28px;
   display: block;
+  transition: opacity 0.35s ease;
+}
+
+.about-hero.is-active .about-portrait {
+  opacity: 0;
+}
+
+.stage-cards {
+  position: sticky;
+  top: 24px;
+  /* Same height as the text column, like the mockup */
+  height: min(100%, calc(100vh - 48px));
+  max-width: 100%;
+  aspect-ratio: 3 / 4;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.about-hero.is-active .stage-cards {
+  pointer-events: auto;
+}
+
+.stage-card {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.3s ease, transform 0.4s ease, visibility 0s linear 0.4s;
+}
+
+.stage-card.is-active {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: opacity 0.3s ease, transform 0.4s ease, visibility 0s;
+}
+
+.stage-card > img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  display: block;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-.about-wrap .kicker {
-  font-family: var(--font);
-  font-size: clamp(28px, 4vw, 47px);
-  font-weight: 700;
+/* The rotating stack of three */
+
+.stage-deck {
+  display: flex;
+  flex-direction: column;
+}
+
+.deck {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+
+.deck-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 24px;
+  bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.deck-slide img {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.deck-caption {
+  padding: 12px 14px;
+  font-family: var(--about-text);
+  font-size: 14px;
   line-height: 1.2;
-  letter-spacing: -0.01em;
-  margin: 0 auto 28px;
-  max-width: none;
+  color: var(--black);
+}
+
+.deck-slide[data-pos="0"] { z-index: 3; transform: none; }
+.deck-slide[data-pos="1"] { z-index: 2; transform: translate(12px, 12px); }
+.deck-slide[data-pos="2"] { z-index: 1; transform: translate(24px, 24px); }
+
+.deck-slide[data-pos="1"],
+.deck-slide[data-pos="2"] {
+  pointer-events: none;
+}
+
+.deck-slide.is-tossed {
+  opacity: 0;
+  transform: translate(-48px, -6px) rotate(-5deg);
+}
+
+.deck-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding-top: 12px;
+  padding-right: 24px;
+}
+
+.deck-btn {
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--black);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--black);
+  font-size: 17px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.deck-btn:hover,
+.deck-btn:focus-visible {
+  background: var(--hot-pink);
+  border-color: var(--hot-pink);
+  color: #fff;
+  outline: none;
+}
+
+.deck-count {
+  min-width: 3em;
   text-align: center;
+  font-family: var(--about-text);
+  font-size: 13px;
+  color: #555;
 }
 
-.about-wrap p {
-  font-size: 15px;
-  line-height: 1.8;
-  margin: 0 auto 20px;
-  max-width: 640px;
-  color: #1f1f1f;
+/* Thin pink thread from the hovered line to its card */
+
+.about-thread {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+  z-index: 4;
 }
 
-.about-wrap .footnote {
-  margin-top: 8px;
-  font-size: 12px;
-  color: var(--muted);
+.thread-line {
+  fill: none;
+  stroke: var(--hot-pink);
+  stroke-width: 1.25;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 0.45s ease;
 }
+
+.thread-dot {
+  fill: var(--hot-pink);
+  opacity: 0;
+  transition: opacity 0.2s ease 0.3s;
+}
+
+.about-hero.is-active .thread-line {
+  stroke-dashoffset: 0;
+}
+
+.about-hero.is-active .thread-dot {
+  opacity: 1;
+}
+
+/* Press, below the fold */
 
 .about-press {
-  margin-top: 72px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 140px 24px 120px;
+  text-align: center;
 }
 
 .about-press h2 {
@@ -349,6 +590,73 @@ a {
   font-weight: 400;
   letter-spacing: 0.04em;
   color: #444;
+}
+
+.about-press .footnote {
+  margin: 48px 0 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+@media (max-width: 900px) {
+  .about-hero {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "name"
+      "role"
+      "copy"
+      "stage";
+    padding: 32px 24px 0;
+  }
+
+  .about-name {
+    margin-bottom: 12px;
+    white-space: normal;
+  }
+
+  .about-role {
+    justify-self: start;
+    margin: 0 0 32px;
+  }
+
+  .about-copy {
+    max-width: none;
+  }
+
+  .about-stage {
+    contain: none;
+  }
+
+  .about-portrait {
+    position: static;
+    margin-top: 40px;
+  }
+
+  /* On small screens the card opens inline under the tapped paragraph */
+  .stage-cards {
+    position: relative;
+    top: auto;
+    display: none;
+    height: auto;
+    width: min(100%, 380px);
+    margin: 0 0 1.35em;
+  }
+
+  .about-hero.is-active .stage-cards {
+    display: block;
+  }
+
+  .about-hero.is-active .about-portrait {
+    opacity: 1;
+  }
+
+  .about-thread {
+    display: none;
+  }
+
+  .about-press {
+    padding-top: 96px;
+  }
 }
 
 /* ---------- Past life ---------- */
