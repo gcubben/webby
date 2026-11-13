@@ -311,9 +311,10 @@ a {
   position: relative;
   max-width: 1180px;
   margin: 0 auto;
-  padding: 56px 40px 0;
+  padding: 56px 40px 96px;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  /* First column is exactly as wide as the name; the bio wraps inside it */
+  grid-template-columns: max-content minmax(0, 1fr);
   grid-template-areas:
     "name role"
     "copy stage";
@@ -345,7 +346,9 @@ a {
 
 .about-copy {
   grid-area: copy;
-  max-width: 27em;
+  /* Don't widen the column; just fill the width the name sets */
+  width: 0;
+  min-width: 100%;
   font-family: var(--about-text);
   font-size: clamp(16px, 1.45vw, 19px);
   line-height: 1.42;
@@ -363,11 +366,12 @@ a {
 .tie {
   cursor: pointer;
   border-radius: 2px;
-  transition: color 0.2s ease;
+  transition: color 0.35s ease;
 }
 
 .tie:hover,
-.tie.is-active {
+.tie.is-active,
+.tie.is-wave {
   color: var(--hot-pink);
 }
 
@@ -560,40 +564,14 @@ a {
   transition: stroke-dashoffset 0.45s ease;
 }
 
-.thread-dot {
-  fill: var(--hot-pink);
-  opacity: 0;
-  transition: opacity 0.2s ease 0.3s;
-}
-
 .about-hero.is-active .thread-line {
   stroke-dashoffset: 0;
 }
 
-.about-hero.is-active .thread-dot {
-  opacity: 1;
-}
-
-/* Press, below the fold */
-
-.about-press {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 140px 24px 120px;
+.about-footnote {
+  margin: 0;
+  padding: 0 24px 64px;
   text-align: center;
-}
-
-.about-press h2 {
-  margin: 0 0 28px;
-  font-family: var(--font);
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  color: #444;
-}
-
-.about-press .footnote {
-  margin: 48px 0 0;
   font-size: 12px;
   color: var(--muted);
 }
@@ -606,7 +584,7 @@ a {
       "role"
       "copy"
       "stage";
-    padding: 32px 24px 0;
+    padding: 32px 24px 72px;
   }
 
   .about-name {
@@ -617,10 +595,6 @@ a {
   .about-role {
     justify-self: start;
     margin: 0 0 32px;
-  }
-
-  .about-copy {
-    max-width: none;
   }
 
   .about-stage {
@@ -652,10 +626,6 @@ a {
 
   .about-thread {
     display: none;
-  }
-
-  .about-press {
-    padding-top: 96px;
   }
 }
 

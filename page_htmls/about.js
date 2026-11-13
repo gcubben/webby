@@ -13,7 +13,6 @@
   var cardsEl = hero.querySelector(".stage-cards");
   var cards = Array.prototype.slice.call(hero.querySelectorAll(".stage-card"));
   var line = hero.querySelector(".thread-line");
-  var dot = hero.querySelector(".thread-dot");
   var narrow = window.matchMedia("(max-width: 900px)");
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
@@ -90,7 +89,7 @@
 
     var x1 = t.right - h.left + 14;
     var y1 = last.top + last.height / 2 - h.top;
-    var x2 = c.left - h.left - 8;
+    var x2 = c.left - h.left - 3;
     var y2 = Math.min(Math.max(y1, c.top - h.top + 48), c.bottom - h.top - 48);
     var bend = Math.max((x2 - x1) * 0.5, 12);
 
@@ -99,8 +98,6 @@
       "M" + x1 + " " + y1 +
       " C" + (x1 + bend) + " " + y1 + " " + (x2 - bend) + " " + y2 + " " + x2 + " " + y2
     );
-    dot.setAttribute("cx", x2);
-    dot.setAttribute("cy", y2);
   }
 
   function replayThread() {
@@ -134,7 +131,9 @@
 
   ties.forEach(function (tie) {
     tie.addEventListener("pointerenter", function (e) {
-      if (e.pointerType === "mouse") activate(tie);
+      if (e.pointerType !== "mouse") return;
+      userActed();
+      activate(tie);
     });
     tie.addEventListener("pointerleave", function (e) {
       if (e.pointerType === "mouse") scheduleHide();
@@ -144,6 +143,7 @@
       pointerDownOnTie = true;
     });
     tie.addEventListener("click", function () {
+      userActed();
       pointerDownOnTie = false;
       if (active === tie && lastPointer !== "mouse") deactivate();
       else activate(tie);
@@ -151,12 +151,15 @@
     tie.addEventListener("keydown", function (e) {
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
+        userActed();
         if (active === tie) deactivate();
         else activate(tie);
       }
     });
     tie.addEventListener("focus", function () {
-      if (!pointerDownOnTie) activate(tie);
+      if (pointerDownOnTie) return;
+      userActed();
+      activate(tie);
     });
     tie.addEventListener("blur", function (e) {
       if (!e.relatedTarget || !cardsEl.contains(e.relatedTarget)) scheduleHide();
@@ -166,7 +169,9 @@
   /* ---------- Cards: keep open while in use ---------- */
 
   cardsEl.addEventListener("pointerenter", function (e) {
-    if (e.pointerType === "mouse") clearTimeout(hideTimer);
+    if (e.pointerType !== "mouse") return;
+    userActed();
+    clearTimeout(hideTimer);
   });
   cardsEl.addEventListener("pointerleave", function (e) {
     if (e.pointerType === "mouse") scheduleHide();
@@ -189,6 +194,60 @@
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") deactivate();
   });
+
+  /* ---------- Hints: a pink wave on load, then a demo ---------- */
+
+  var WAVE_START = 700; // after the page settles
+  var WAVE_STEP = 260; // gap between each line lighting up
+  var WAVE_HOLD = 650; // how long each line stays pink
+  var DEMO_AFTER = 10000; // open a card by itself if nobody has yet
+  var DEMO_HOLD = 4000; // how long the demo card stays open
+
+  var userHasActed = false;
+  var demoTimer = null;
+  var demoCloseTimer = null;
+
+  // Any real hover, tap or focus cancels the demo for good.
+  function userActed() {
+    if (userHasActed) return;
+    userHasActed = true;
+    clearTimeout(demoTimer);
+    clearTimeout(demoCloseTimer);
+  }
+
+  function playWave() {
+    ties.forEach(function (tie, i) {
+      setTimeout(function () {
+        tie.classList.add("is-wave");
+        setTimeout(function () {
+          tie.classList.remove("is-wave");
+        }, WAVE_HOLD);
+      }, i * WAVE_STEP);
+    });
+  }
+
+  function heroInView() {
+    var r = hero.getBoundingClientRect();
+    return r.top < window.innerHeight && r.bottom > 0;
+  }
+
+  function runDemo() {
+    // Skip on phones: opening a card there would push the text around.
+    if (userHasActed || active || narrow.matches || document.hidden || !heroInView()) return;
+    var first = ties[0];
+    activate(first);
+    demoCloseTimer = setTimeout(function () {
+      if (!userHasActed && active === first) deactivate();
+    }, DEMO_HOLD);
+  }
+
+  function startHints() {
+    setTimeout(playWave, WAVE_START);
+    demoTimer = setTimeout(runDemo, DEMO_AFTER);
+  }
+
+  if (document.readyState === "complete") startHints();
+  else window.addEventListener("load", startHints);
 
   /* ---------- The stack of three ---------- */
 
