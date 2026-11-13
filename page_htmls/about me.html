@@ -3,98 +3,153 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>about me — Georgie Ubben | Junior Strategist</title>
+  <title>about — Georgie Ubben | Strategist</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;500;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,700;1,6..12,400&display=swap" rel="stylesheet" />
-  <link href="theme.css?v=2" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,700&family=Montserrat:wght@400;500;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,700;1,6..12,400&display=swap" rel="stylesheet" />
+  <link href="theme.css?v=10" rel="stylesheet" />
 </head>
 <body class="page-about">
   <header class="site-header">
-    <nav class="nav-left">
-      <a href="../index.html" class="nav-link">work</a>
-      <a href="articles.html" class="nav-link">reader's corner</a>
+    <a href="../index.html" class="site-name">Georgie Ubben</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="../index.html" class="nav-link">Work</a>, <a href="articles.html" class="nav-link">Musings</a>, <a href="about me.html" class="nav-link is-active" aria-current="page">About</a>
     </nav>
-    <a href="../index.html" class="site-title">Georgie Ubben</a>
-    <nav class="nav-right">
-      <a href="about me.html" class="nav-link is-active">about me</a>
-    </nav>
+    <p class="site-place">New York City</p>
     <button class="menu-toggle" aria-label="Open menu"><span></span></button>
   </header>
-  <nav class="mobile-nav">
-    <a href="../index.html" class="nav-link">work</a>
-    <a href="articles.html" class="nav-link">reader's corner</a>
-    <a href="about me.html" class="nav-link is-active">about me</a>
+  <nav class="mobile-nav" aria-label="Main">
+    <a href="../index.html" class="nav-link">Work</a>
+    <a href="articles.html" class="nav-link">Musings</a>
+    <a href="about me.html" class="nav-link is-active" aria-current="page">About</a>
+    <p class="site-place">New York City</p>
   </nav>
 
-  <main class="about-hero" data-about>
-    <h1 class="about-name">Georgie Ubben</h1>
-    <p class="about-role">Junior Strategist</p>
+  <main class="about">
+    <!-- Two columns: mantra top left, portrait right and below it -->
+    <section class="top">
+      <p class="mantra-line">People are always looking for something worth believing in.</p>
+      <figure class="intro-portrait">
+        <img src="../about/portrait.jpg" alt="Black and white portrait of Georgie Ubben" />
+      </figure>
+    </section>
 
-    <div class="about-copy">
-      <p><span class="tie" data-card="believing" tabindex="0">People are always looking for something worth believing in.</span></p>
+    <h1 class="giant" aria-label="Georgie"><span class="giant-word" aria-hidden="true">Georgie</span></h1>
 
-      <p>It’s why we get out of bed in the morning. It’s also why we’ll spend $8 on a coffee when there’s a perfectly good pot at home. It’s not all math. <span class="tie" data-card="products" tabindex="0">We’re products of believing.</span></p>
-
-      <p>At Duke, I studied economics and religion, which sounds like a peculiar pairing, but it turns out they’re both about value. Where it comes from, who decides it, and why people will give up so much to hold onto it. Most of our days revolve around what will make it better. <span class="tie" data-card="chasing" tabindex="0">Chasing an answer to make everything else make sense.</span></p>
-
-      <p>That’s how I see advertising too. People are searching, and half the time they don’t even know what for. Advertising seeks to give them something not only worth choosing but something worth believing in. <span class="tie" data-card="idea" tabindex="0">Because when the idea is right, and the words convey a valuable conviction, it can become something much bigger than the product.</span></p>
-
-      <p><span class="tie" data-card="connections" tabindex="0">I help make those kinds of connections happen.</span> And hopefully leave a few things better than I found them.</p>
+    <div class="bio">
+      <p>It’s why I get out of bed in the morning. It’s also why I’ll spend $8 on a coffee when there’s a perfectly good pot at home. <a class="belief-link" href="#products">We’re all products of believing.</a> At Duke, I studied economics and religion, which sounds like a peculiar pairing, but it turns out they’re both about value. Where it comes from, who decides it, and why people will give up so much to hold onto it. <a class="belief-link" href="#kuya">Most of our days revolve around what will make it better.</a> <a class="belief-link" href="#chasing">Chasing an answer to make everything else make sense.</a> That’s how I see advertising too. People are searching, and half the time they don’t even know what for. <a class="belief-link" href="#pwc">Advertising gives them something not only worth choosing but something worth believing in.</a> <a class="belief-link" href="#idea">Because when the idea is right, and the words reflect real value, it can become something much bigger than the product.</a> I help make those kinds of connections happen. <a class="belief-link" href="#stages">And hopefully leave a few things better than I found them.</a></p>
     </div>
 
-    <div class="about-stage">
-      <img class="about-portrait" src="../about/portrait.jpg" alt="Georgie Ubben" />
+    <!-- Feed: statements alternate sides -->
+    <section class="feed" aria-label="Writing and work">
 
-      <div class="stage-cards" aria-live="polite">
-        <a class="stage-card" data-card="believing" href="https://www.therepublik.com/journal/what-people-buy-doesnt-tell-you-what-they-want" target="_blank" rel="noopener">
-          <img src="../about/article-what-people-buy.jpg" alt="Article: What People Buy Doesn’t Tell You What They Want" loading="lazy" />
+      <article class="entry" id="believing">
+        <h2 class="statement">
+          <span>People are always</span>
+          <span>looking for something</span>
+          <span>worth believing in.</span>
+        </h2>
+        <a class="entry-media" href="https://www.therepublik.com/journal/what-people-buy-doesnt-tell-you-what-they-want" target="_blank" rel="noopener">
+          <img src="../about/feed-what-people-buy.jpg" alt="Torn brown paper revealing black underneath" loading="lazy" />
         </a>
-
-        <a class="stage-card" data-card="products" href="https://www.therepublik.com/journal/why-people-buy" target="_blank" rel="noopener">
-          <img src="../about/article-why-people-buy.jpg" alt="Article: Why People Buy" loading="lazy" />
-        </a>
-
-        <a class="stage-card" data-card="chasing" href="https://www.therepublik.com/journal/what-happens-when-the-bandwagon-falls-apart" target="_blank" rel="noopener">
-          <img src="../about/article-bandwagon.jpg" alt="Article: What Happens When the Bandwagon Falls Apart?" loading="lazy" />
-        </a>
-
-        <a class="stage-card" data-card="idea" href="https://www.therepublik.com/journal/brand-value-is-a-worthy-investment-e6c92" target="_blank" rel="noopener">
-          <img src="../about/article-brand-value.jpg" alt="Article: Brand Value Is a Worthy Investment" loading="lazy" />
-        </a>
-
-        <div class="stage-card stage-deck" data-card="connections">
-          <div class="deck">
-            <a class="deck-slide" href="kuya.html">
-              <img src="../cases/kuya-cover.jpg" alt="" loading="lazy" />
-              <span class="deck-caption">Kuya Wellness</span>
-            </a>
-            <a class="deck-slide" href="pwc.html">
-              <img src="../cases/pwc-cover.jpg" alt="" loading="lazy" />
-              <span class="deck-caption">Public Works Commission</span>
-            </a>
-            <a class="deck-slide" href="stages.html">
-              <img src="../cases/stages-cover.jpg" alt="" loading="lazy" />
-              <span class="deck-caption">Stages</span>
-            </a>
-          </div>
-          <div class="deck-controls">
-            <button type="button" class="deck-btn" data-dir="-1" aria-label="Previous image">&larr;</button>
-            <span class="deck-count" aria-live="polite">1 / 3</span>
-            <button type="button" class="deck-btn" data-dir="1" aria-label="Next image">&rarr;</button>
-          </div>
+        <div class="entry-body">
+          <p><span class="entry-title">What people buy doesn’t tell you what they want.</span> What people buy is a matter of choices. It’s the conclusion they came to through a series of constraints. Strategic thinking at its best hears the wish before anyone says it out loud.</p>
         </div>
-      </div>
-    </div>
+      </article>
 
-    <svg class="about-thread" aria-hidden="true">
-      <path class="thread-line" d="" />
-    </svg>
+      <article class="entry" id="products">
+        <h2 class="statement">
+          <span>We’re all products</span>
+          <span>of believing.</span>
+        </h2>
+        <a class="entry-media" href="https://www.therepublik.com/journal/why-people-buy" target="_blank" rel="noopener">
+          <img src="../about/feed-why-people-buy.jpg" alt="Maslow’s hierarchy of needs drawn in chalk" loading="lazy" />
+        </a>
+        <div class="entry-body">
+          <p><span class="entry-title">Why people buy.</span> Too many brands are still stuck at the bottom of Maslow’s hierarchy, obsessing over functionality and calling it a day. Meeting functional needs is just the buy in. If you want to win, aim higher.</p>
+        </div>
+      </article>
+
+      <article class="entry" id="kuya">
+        <h2 class="statement">
+          <span>Most of our days</span>
+          <span>revolve around what</span>
+          <span>will make it better.</span>
+        </h2>
+        <a class="entry-media" href="kuya.html">
+          <img src="../cases/kuya-cover.jpg" alt="Kuya Wellness" loading="lazy" />
+        </a>
+        <div class="entry-body">
+          <p><span class="entry-title">The rise of new wellness.</span> Wellness used to mean just one or two simple things: going to the gym and eating healthy. But as the wellness industry has combusted, the market has become overrun with viral hacks and trendy pills all promising the big fix. Kuya’s stacked, multi-modality approach offered real depth comparatively, but it also left them struggling to claim a single, clear lane. Deeper research revealed audiences were already paying premium prices for multiple separate wellness memberships, yet Kuya provided that entire ecosystem under one roof. The strategic hurdle was creating a position that balanced science-backed clinical credibility with their distinct, avant-garde bohemian identity, all while empowering the customer to take agency over their own health. They couldn’t speak to the category because it didn’t exist yet. So we created our own. Kuya: Healthcare for your nervous system. By reframing their offerings from a random suite of services into a tailored, expert-guided path for nervous system regulation, we bridged the gap between clinical efficacy and holistic lifestyle wellness. Kuya. Remeet You.</p>
+        </div>
+      </article>
+
+      <article class="entry" id="chasing">
+        <h2 class="statement">
+          <span>Chasing an answer</span>
+          <span>to make everything</span>
+          <span>else make sense.</span>
+        </h2>
+        <a class="entry-media" href="https://www.therepublik.com/journal/what-happens-when-the-bandwagon-falls-apart" target="_blank" rel="noopener">
+          <img src="../about/feed-bandwagon.jpg" alt="A man alone in a stadium of empty seats" loading="lazy" />
+        </a>
+        <div class="entry-body">
+          <p><span class="entry-title">What happens when the bandwagon falls apart?</span> Healthier lifestyles and cannabis alternatives are taking over, and many alcohol brands are showing how ill-equipped they are for the new “survival of the fittest” reality. How will you distance yourself from the fallout and create lasting brand value?</p>
+        </div>
+      </article>
+
+      <article class="entry" id="pwc">
+        <h2 class="statement is-long">
+          <span>Advertising gives them</span>
+          <span>something not only worth choosing</span>
+          <span>but something worth believing in.</span>
+        </h2>
+        <a class="entry-media" href="pwc.html">
+          <img src="../cases/pwc-cover.jpg" alt="Public Works Commission" loading="lazy" />
+        </a>
+        <div class="entry-body">
+          <p><span class="entry-title">Homemaking the hometown utility.</span> Most people view utilities as entities, not brands. They’re invisible services that only earn attention when something goes wrong. A sudden outage or a big bill hike. As North Carolina’s largest municipal electric system, Public Works Commission (PWC), wanted to be visible for all the good they do across the state. Its hometown, Fayetteville, is an all-American city with a small-town personality. After some time with the city, we found they were a backbone of the community with an outdated communication model. They relied on one-off, subject-driven broadcasts detailing PWC's daily operations rather than their impact. Real brand affinity would only come from shifting the narrative from a transactional push of "what we do" to a value-driven story of "why it matters." They needed a connected framework that proved they not only power the community, they help build it.</p>
+        </div>
+      </article>
+
+      <article class="entry" id="idea">
+        <h2 class="statement is-long">
+          <span>Because when the idea is right,</span>
+          <span>and the words</span>
+          <span>reflect real value,</span>
+          <span>it can become something</span>
+          <span>much bigger than the product.</span>
+        </h2>
+        <a class="entry-media" href="https://www.therepublik.com/journal/brand-value-is-a-worthy-investment-e6c92" target="_blank" rel="noopener">
+          <img src="../about/feed-brand-value.jpg" alt="One small figure standing apart from a crowd" loading="lazy" />
+        </a>
+        <div class="entry-body">
+          <p><span class="entry-title">Brand value is a worthy investment.</span> In their race for sales, digital marketers may be selling themselves short. Brand value drives customer loyalty, protects price integrity and helps create a barrier to entry.</p>
+        </div>
+      </article>
+
+      <article class="entry" id="stages">
+        <h2 class="statement">
+          <span>And hopefully leave</span>
+          <span>a few things better</span>
+          <span>than I found them.</span>
+        </h2>
+        <a class="entry-media" href="stages.html">
+          <img src="../cases/stages-cover.jpg" alt="Stages" loading="lazy" />
+        </a>
+        <div class="entry-body">
+          <p><span class="entry-title">A name for every stage of growth.</span> How does a regional theater in rural North Carolina scale its revenue to support a $25 million expansion? This is the question Cape Fear Regional Theater, which consistently rivaled bigger hubs like Raleigh and Durham, came to us with. Not only did it have a location-bound name that kept them feeling small, but it also had a linear way to bring in profits that kept them too reliant on donations. In a modern entertainment market driven by multi-experience spaces like food halls and pop-up venues, the theater needed to redefine what it offered. They had already built trust in their artistic excellence; now they needed to leverage that existing trust into becoming more than just a theater and, more so, a competitive entertainment destination. To support this shift and drive new revenue streams, we advised transforming the enlarged facility into a vibrant, multi-functional hub complete with an integrated bar, restaurant, and versatile event spaces capable of hosting year-round programming. As we conducted interviews, we realized the brand’s true spirit lay in its deep generational roots. Local families grew up on these stages across every season of their lives. To break free from geographic limits, we shed the regional title and rebranded the institution as Stages. The name bridges the literal physical stage with the personal stages of life that every child, parent, and grandparent experiences within its walls. By framing the brand around lifelong artistic connection, Stages unlocked a scalable, modern identity capable of filling seats, expanding revenue, and anchoring the region’s cultural future.</p>
+        </div>
+      </article>
+    </section>
   </main>
 
-  <p class="about-footnote">no puppies were harmed in the making of this website</p>
+  <footer class="about-footer">
+    <p>Georgie Ubben, Strategist</p>
+    <p>no puppies were harmed in the making of this website</p>
+  </footer>
 
-  <script src="nav.js?v=2"></script>
-  <script src="about.js?v=2"></script>
+  <script src="nav.js?v=3"></script>
+  <script src="about.js?v=5"></script>
 </body>
 </html>
