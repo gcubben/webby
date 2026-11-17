@@ -200,10 +200,6 @@ a {
   letter-spacing: -0.02em;
 }
 
-.mantra p + p {
-  text-indent: 2.5em;
-}
-
 .mantra-label {
   margin-right: 1.4em;
   vertical-align: baseline;
@@ -347,11 +343,13 @@ a {
   white-space: nowrap;
 }
 
+/* Every entry uses the same headline-to-body gap: the one "Why People Buy"
+   had (360px at a 1280px-wide window) */
 .entry-body {
   grid-area: body;
-  align-self: end;
+  align-self: start;
   max-width: 32em;
-  padding-top: clamp(32px, 4vw, 64px);
+  padding-top: clamp(96px, 28.1vw, 420px);
 }
 
 .entry-body p {
@@ -397,10 +395,6 @@ a {
 }
 
 @media (max-width: 760px) {
-  .mantra p + p {
-    text-indent: 1.5em;
-  }
-
   .intro {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
