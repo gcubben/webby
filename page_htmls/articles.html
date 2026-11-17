@@ -6,140 +6,281 @@
   <title>musings — Georgie Ubben | Strategist</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Montserrat:wght@400;500;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,700;1,6..12,400&display=swap" rel="stylesheet" />
-  <link href="theme.css?v=10" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,800&family=EB+Garamond:wght@400&display=swap" rel="stylesheet" />
+  <link href="theme.css?v=11" rel="stylesheet" />
 </head>
 <body class="page-musings">
   <header class="site-header">
     <a href="../index.html" class="site-name">Georgie Ubben</a>
     <nav class="site-nav" aria-label="Main">
-      <a href="../index.html" class="nav-link">Work</a>, <a href="articles.html" class="nav-link is-active" aria-current="page">Musings</a>, <a href="about me.html" class="nav-link">About</a>
+      <a href="../index.html#work" class="nav-link">Work</a>, <a href="articles.html" class="nav-link is-active" aria-current="page">Musings</a>, <a href="../index.html#about" class="nav-link">About</a>
     </nav>
     <p class="site-place">New York City</p>
     <button class="menu-toggle" aria-label="Open menu"><span></span></button>
   </header>
   <nav class="mobile-nav" aria-label="Main">
-    <a href="../index.html" class="nav-link">Work</a>
+    <a href="../index.html#work" class="nav-link">Work</a>
     <a href="articles.html" class="nav-link is-active" aria-current="page">Musings</a>
-    <a href="about me.html" class="nav-link">About</a>
+    <a href="../index.html#about" class="nav-link">About</a>
     <p class="site-place">New York City</p>
   </nav>
 
-  <section class="page-heading">
-    <h1>Musings</h1>
-  </section>
+  <main class="musings">
+    <h1 class="musings-title">Musings</h1>
 
-  <main>
-    <p class="section-label">articles</p>
-    <div class="index-list compact">
-    <a class="index-item" href="https://www.therepublik.com/journal/the-rtd-curveball">
-      <img src="../reading/covers/rtd-curveball.png" alt="The RTD Curveball" />
-      <div class="index-item-overlay"><h2>The RTD Curveball</h2></div>
-    </a>
-    <a class="index-item" href="https://www.therepublik.com/journal/plants-to-ai-we-were-here-first">
-      <img src="../reading/covers/plants-to-ai.png" alt="Plants to AI: We Were Here First" />
-      <div class="index-item-overlay"><h2>Plants to AI: We Were Here First</h2></div>
-    </a>
-    <a class="index-item" href="https://www.therepublik.com/journal/why-people-buy">
-      <img src="../reading/covers/why-people-buy.png" alt="Why People Buy" />
-      <div class="index-item-overlay"><h2>Why People Buy</h2></div>
-    </a>
-    <a class="index-item" href="https://www.therepublik.com/journal/the-pitfalls-of-microtrend-marketing">
-      <img src="../reading/covers/microtrend.png" alt="The Pitfalls of Microtrend Marketing" />
-      <div class="index-item-overlay"><h2>The Pitfalls of Microtrend Marketing</h2></div>
-    </a>
-    <a class="index-item" href="https://www.therepublik.com/journal/stuck-on-the-surface">
-      <img src="../reading/covers/stuck-on-the-surface.png" alt="Stuck on the Surface" />
-      <div class="index-item-overlay"><h2>Stuck on the Surface</h2></div>
-    </a>
-    <a class="index-item" href="https://www.therepublik.com/journal/behind-the-fourth-wall">
-      <img src="../reading/covers/behind-the-fourth-wall.png" alt="Behind the Fourth Wall" />
-      <div class="index-item-overlay"><h2>Behind the Fourth Wall</h2></div>
-    </a>
-    <a class="index-item" href="https://www.therepublik.com/journal/brand-value-is-a-worthy-investment-e6c92">
-      <img src="../reading/covers/brand-value.png" alt="Brand Value Is a Worthy Investment" />
-      <div class="index-item-overlay"><h2>Brand Value Is a Worthy Investment</h2></div>
-    </a>
-    <a class="index-item" href="https://www.therepublik.com/journal/where-is-your-marketing-taking-you-this-year">
-      <img src="../reading/covers/where-is-your-marketing.png" alt="Where Is Your Marketing Taking You This Year?" />
-      <div class="index-item-overlay"><h2>Where Is Your Marketing Taking You This Year?</h2></div>
-    </a>
-    <a class="index-item" href="https://www.therepublik.com/journal/what-happens-when-the-bandwagon-falls-apart">
-      <img src="../reading/covers/bandwagon.png" alt="What Happens When the Bandwagon Falls Apart?" />
-      <div class="index-item-overlay"><h2>What Happens When the Bandwagon Falls Apart?</h2></div>
-    </a>
-    <a class="index-item" href="https://www.therepublik.com/journal/rethinking-the-stakeholder-equation">
-      <img src="../reading/covers/stakeholder-equation.png" alt="Rethinking the Stakeholder Equation" />
-      <div class="index-item-overlay"><h2>Rethinking the Stakeholder Equation</h2></div>
-    </a>
-    </div>
+    <!-- Each row: label | image | title, two-sentence teaser, More (opens in a new tab) -->
+    <section class="m-section" aria-labelledby="m-articles">
+      <h2 class="small m-label" id="m-articles">Articles</h2>
 
-    <p class="section-label">newsletters</p>
-    <div class="index-list compact">
-    <a class="index-item" href="https://www.therepublik.com/campaigns/view-campaign/ZR6QCebV_QJr4pZUYemTwTAxVxjtuNFhFRspoRIkq4O5cX-dtZb0jCdc8ZXKHR_q-gSc7D-ovSLRb1nAGV5rSNbiB0C-3UmS">
-      <img src="../reading/covers/how-to-know.png" alt="How to Know What You Don’t Know" />
-      <div class="index-item-overlay"><h2>How to Know What You Don’t Know</h2></div>
-    </a>
-    <a class="index-item" href="https://www.therepublik.com/campaigns/view-campaign/Kr3EdNBxwacj-_D-F4C2CzWLHgOcqDIakOGnFhDgvcXyEjb5e2srTBj3oYriQJuUsxibMJjzwXm8_QCFGSicF0Bqe3bc1sXv">
-      <img src="../reading/covers/the-bad-good.png" alt="The Bad Good" />
-      <div class="index-item-overlay"><h2>The Bad Good</h2></div>
-    </a>
-    <a class="index-item" href="https://www.therepublik.com/campaigns/view-campaign/O1B3wrXS8iaL2ezDwGqv3g0MpXq5QagGWAN8MB3skNBZiTSc-2feFCjm5godxadHG84BA_37GdJEAHlVogQSLvkcoFWNYOGb">
-      <img src="../reading/covers/the-quiet-engine.png" alt="The Quiet Engine" />
-      <div class="index-item-overlay"><h2>The Quiet Engine</h2></div>
-    </a>
-    <a class="index-item" href="https://www.therepublik.com/campaigns/view-campaign/syy4qq8wB-K05gZg7PLVYLfZw2njawXIytg8XRPR4_0Chd3VQMPU_6l7kOx6zUDjpdSbN_UWxjXl_1S8mgx8BxoMa3RQO4b3">
-      <img src="../reading/covers/built-to-last.png" alt="Built to Last" />
-      <div class="index-item-overlay"><h2>Built to Last</h2></div>
-    </a>
-    <a class="index-item" href="https://www.therepublik.com/campaigns/view-campaign/cgyXFxv7mpm14K6peyG8EmADGCgZD0hg0OPaCW1onJPp2DhDa0vUKQ1oLB1OF2eo_Yfg_WAY3JVX8f7cYJX4W2cDHqopxSqU">
-      <img src="../reading/covers/boundaries-are-for-breaking.png" alt="Boundaries Are for Breaking" />
-      <div class="index-item-overlay"><h2>Boundaries Are for Breaking</h2></div>
-    </a>
-    <a class="index-item" href="https://www.therepublik.com/campaigns/view-campaign/K9nYlWsBTDOLPyFCmIo3Jt0zwYSDf7Z6P0cjTbyc0DI7zOTGXq2DN_g3noX3C8CVLGCR5SpWs5ggTXuWZVUCL3iypfB_8_mU">
-      <img src="../reading/covers/better-together.png" alt="Better Together" />
-      <div class="index-item-overlay"><h2>Better Together</h2></div>
-    </a>
-    <a class="index-item" href="https://www.therepublik.com/campaigns/view-campaign/iBSwUx4fJeKA54gg2ojwk_wmImzMx6qESVUCGHQNqWgQq00SR1hWdEqTiCGXyck6hZKyJ64Oj_gthGTXBkyTEuWeddbWAgCL">
-      <img src="../reading/covers/stick-the-landing.png" alt="Stick the Landing" />
-      <div class="index-item-overlay"><h2>Stick the Landing</h2></div>
-    </a>
-    </div>
+      <article class="m-item">
+        <p class="small m-meta">Strategy<br />Oct 15</p>
+        <a class="m-media" href="https://www.therepublik.com/journal/the-rtd-curveball" target="_blank" rel="noopener" tabindex="-1"><img src="../reading/covers/rtd-curveball.png" alt="" loading="lazy" /></a>
+        <div class="m-text">
+          <h3 class="m-title">The RTD Curveball</h3>
+          <p>As RTDs reshape the spirits landscape, the parallel to craft beers’ rattling of Big Beer is undeniably eerie. What Big Beer didn’t understand then was that the market share they lost were audiences searching for something uniquely different.</p>
+          <a class="small m-more" href="https://www.therepublik.com/journal/the-rtd-curveball" target="_blank" rel="noopener">More →</a>
+        </div>
+      </article>
 
-    <p class="section-label">press releases</p>
-    <div class="index-list compact">
-    <a class="index-item" href="../reading/Big Blood -  In My Head PR.pdf">
-      <img src="../reading/thumbnails/11.jpg" alt="In My Head PR" />
-      <div class="index-item-overlay"><h2>In My Head PR</h2></div>
-    </a>
-    <a class="index-item" href="../reading/Lady Lamb 10 Years PR.pdf">
-      <img src="../reading/thumbnails/6.jpg" alt="Lady Lamb 10 Year PR" />
-      <div class="index-item-overlay"><h2>Lady Lamb 10 Year PR</h2></div>
-    </a>
-    <a class="index-item" href="../reading/Lisel Blades Of Grass MV PR.pdf">
-      <img src="../reading/thumbnails/4.jpg" alt="Blades of Grass PR" />
-      <div class="index-item-overlay"><h2>Blades of Grass PR</h2></div>
-    </a>
-    <a class="index-item" href="../reading/Lady Lamb Crane Your Neck (Still Hungry Version) PR.pdf">
-      <img src="../reading/thumbnails/2.jpg" alt="Crane Your Neck PR" />
-      <div class="index-item-overlay"><h2>Crane Your Neck PR</h2></div>
-    </a>
-    </div>
+      <article class="m-item">
+        <p class="small m-meta">Marketing<br />Sep 19</p>
+        <a class="m-media" href="https://www.therepublik.com/journal/plants-to-ai-we-were-here-first" target="_blank" rel="noopener" tabindex="-1"><img src="../reading/covers/plants-to-ai.png" alt="" loading="lazy" /></a>
+        <div class="m-text">
+          <h3 class="m-title">Plants to AI: We Were Here First</h3>
+          <p>While we’ve been busy celebrating artificial intelligence, nature continues to quietly remind us how little we truly understand. New research shows that plants are actually sentient beings, able to recognize even the color of your shirt.</p>
+          <a class="small m-more" href="https://www.therepublik.com/journal/plants-to-ai-we-were-here-first" target="_blank" rel="noopener">More →</a>
+        </div>
+      </article>
 
-    <p class="section-label">music reviews</p>
-    <div class="index-list compact">
-    <a class="index-item" href="../reading/mlr.pdf">
-      <img src="../reading/thumbnails/9.jpg" alt="Kicking Away Album Review" />
-      <div class="index-item-overlay"><h2>Kicking Away Album Review</h2></div>
-    </a>
-    <a class="index-item" href="../reading/wer.pdf">
-      <img src="../reading/thumbnails/10.jpg" alt="Eye Music Album Review" />
-      <div class="index-item-overlay"><h2>Eye Music Album Review</h2></div>
-    </a>
-    </div>
+      <article class="m-item">
+        <p class="small m-meta">Marketing<br />Sep 2</p>
+        <a class="m-media" href="https://www.therepublik.com/journal/why-people-buy" target="_blank" rel="noopener" tabindex="-1"><img src="../reading/covers/why-people-buy.png" alt="" loading="lazy" /></a>
+        <div class="m-text">
+          <h3 class="m-title">Why People Buy</h3>
+          <p>We all know Maslow’s hierarchy: start with the basics like food and safety, and build up to higher desires like friendship, creativity, and everything that makes life worth living. Yet, even 80 years after Maslow broke down human motivation, most marketers still don’t get it.</p>
+          <a class="small m-more" href="https://www.therepublik.com/journal/why-people-buy" target="_blank" rel="noopener">More →</a>
+        </div>
+      </article>
+
+      <article class="m-item">
+        <p class="small m-meta">Marketing<br />Aug 19</p>
+        <a class="m-media" href="https://www.therepublik.com/journal/the-pitfalls-of-microtrend-marketing" target="_blank" rel="noopener" tabindex="-1"><img src="../reading/covers/microtrend.png" alt="" loading="lazy" /></a>
+        <div class="m-text">
+          <h3 class="m-title">The Pitfalls of Microtrend Marketing</h3>
+          <p>Microtrends: those fleeting, viral moments that sweep across social media, have become the bread and butter of social media managers looking for easy engagement. And sure, they can be useful to grab a quick laugh over how your brand name looks in “brat” type.</p>
+          <a class="small m-more" href="https://www.therepublik.com/journal/the-pitfalls-of-microtrend-marketing" target="_blank" rel="noopener">More →</a>
+        </div>
+      </article>
+
+      <article class="m-item">
+        <p class="small m-meta">Marketing<br />Aug 3</p>
+        <a class="m-media" href="https://www.therepublik.com/journal/stuck-on-the-surface" target="_blank" rel="noopener" tabindex="-1"><img src="../reading/covers/stuck-on-the-surface.png" alt="" loading="lazy" /></a>
+        <div class="m-text">
+          <h3 class="m-title">Stuck on the Surface</h3>
+          <p>AI promises a lot, but as Ad Age notes, “personalization can move from cool to creepy” quickly. I doubt I’m alone in the familiar uneasiness of always feeling like someone is watching me.</p>
+          <a class="small m-more" href="https://www.therepublik.com/journal/stuck-on-the-surface" target="_blank" rel="noopener">More →</a>
+        </div>
+      </article>
+
+      <article class="m-item">
+        <p class="small m-meta">Strategy<br />Aug 2</p>
+        <a class="m-media" href="https://www.therepublik.com/journal/behind-the-fourth-wall" target="_blank" rel="noopener" tabindex="-1"><img src="../reading/covers/behind-the-fourth-wall.png" alt="" loading="lazy" /></a>
+        <div class="m-text">
+          <h3 class="m-title">Behind the Fourth Wall</h3>
+          <p>Much of our client work revolves around making sure our client brands’ communication authentically represents their story. This week, maybe unsurprisingly, the new Deadpool and Wolverine movie got us thinking about the branding truths that lie behind the fourth wall.</p>
+          <a class="small m-more" href="https://www.therepublik.com/journal/behind-the-fourth-wall" target="_blank" rel="noopener">More →</a>
+        </div>
+      </article>
+
+      <article class="m-item">
+        <p class="small m-meta">Brand Value<br />Jun 28</p>
+        <a class="m-media" href="https://www.therepublik.com/journal/brand-value-is-a-worthy-investment-e6c92" target="_blank" rel="noopener" tabindex="-1"><img src="../reading/covers/brand-value.png" alt="" loading="lazy" /></a>
+        <div class="m-text">
+          <h3 class="m-title">Brand Value Is a Worthy Investment</h3>
+          <p>In their race for sales, digital marketers may be selling themselves short. In a recently published interview with Chubbie’s co-founder Preston Rutherford, he revealed the brand’s initial strategy was to drive digital sales and lower-funnel metrics, thereby maximizing the return on advertising spent (ROAS).</p>
+          <a class="small m-more" href="https://www.therepublik.com/journal/brand-value-is-a-worthy-investment-e6c92" target="_blank" rel="noopener">More →</a>
+        </div>
+      </article>
+
+      <article class="m-item">
+        <p class="small m-meta">Strategy<br />Feb 6</p>
+        <a class="m-media" href="https://www.therepublik.com/journal/where-is-your-marketing-taking-you-this-year" target="_blank" rel="noopener" tabindex="-1"><img src="../reading/covers/where-is-your-marketing.png" alt="" loading="lazy" /></a>
+        <div class="m-text">
+          <h3 class="m-title">Where Is Your Marketing Taking You This Year?</h3>
+          <p>With a lackluster 2024 in the rearview mirror, and favorable forecasts for the year, it’s pretty easy to convince ourselves that doing anything right now, especially in a competitive marketplace, is better than waiting. We would tend to argue the opposite.</p>
+          <a class="small m-more" href="https://www.therepublik.com/journal/where-is-your-marketing-taking-you-this-year" target="_blank" rel="noopener">More →</a>
+        </div>
+      </article>
+
+      <article class="m-item">
+        <p class="small m-meta">Survival<br />Jan 30</p>
+        <a class="m-media" href="https://www.therepublik.com/journal/what-happens-when-the-bandwagon-falls-apart" target="_blank" rel="noopener" tabindex="-1"><img src="../reading/covers/bandwagon.png" alt="" loading="lazy" /></a>
+        <div class="m-text">
+          <h3 class="m-title">What Happens When the Bandwagon Falls Apart?</h3>
+          <p>It’s been well reported that the alcohol marketplace has been experiencing a decline, across the board, for over a year. Healthier lifestyles and cannabis alternatives are taking over, and many alcohol brands are showing how ill-equipped they are to face the new “survival of the fittest” reality.</p>
+          <a class="small m-more" href="https://www.therepublik.com/journal/what-happens-when-the-bandwagon-falls-apart" target="_blank" rel="noopener">More →</a>
+        </div>
+      </article>
+
+      <article class="m-item">
+        <p class="small m-meta">Leadership<br />Nov 14</p>
+        <a class="m-media" href="https://www.therepublik.com/journal/rethinking-the-stakeholder-equation" target="_blank" rel="noopener" tabindex="-1"><img src="../reading/covers/stakeholder-equation.png" alt="" loading="lazy" /></a>
+        <div class="m-text">
+          <h3 class="m-title">Rethinking the Stakeholder Equation</h3>
+          <p>Stakeholders aren’t your customers, they’re community assets. As a DMO, how do you prioritize community engagement?</p>
+          <a class="small m-more" href="https://www.therepublik.com/journal/rethinking-the-stakeholder-equation" target="_blank" rel="noopener">More →</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="m-section" aria-labelledby="m-newsletters">
+      <h2 class="small m-label" id="m-newsletters">Newsletters</h2>
+
+      <article class="m-item">
+        <p class="small m-meta">Newsletter</p>
+        <a class="m-media" href="https://www.therepublik.com/campaigns/view-campaign/ZR6QCebV_QJr4pZUYemTwTAxVxjtuNFhFRspoRIkq4O5cX-dtZb0jCdc8ZXKHR_q-gSc7D-ovSLRb1nAGV5rSNbiB0C-3UmS" target="_blank" rel="noopener" tabindex="-1"><img src="../reading/covers/how-to-know.png" alt="" loading="lazy" /></a>
+        <div class="m-text">
+          <h3 class="m-title">How to Know What You Don’t Know</h3>
+          <p>Think about how often we spend our time explaining to someone why our product will work better than the way they’ve done it before. We argue and build cases and push our ideas in vain instead of doing something very simple.</p>
+          <a class="small m-more" href="https://www.therepublik.com/campaigns/view-campaign/ZR6QCebV_QJr4pZUYemTwTAxVxjtuNFhFRspoRIkq4O5cX-dtZb0jCdc8ZXKHR_q-gSc7D-ovSLRb1nAGV5rSNbiB0C-3UmS" target="_blank" rel="noopener">More →</a>
+        </div>
+      </article>
+
+      <article class="m-item">
+        <p class="small m-meta">Newsletter</p>
+        <a class="m-media" href="https://www.therepublik.com/campaigns/view-campaign/Kr3EdNBxwacj-_D-F4C2CzWLHgOcqDIakOGnFhDgvcXyEjb5e2srTBj3oYriQJuUsxibMJjzwXm8_QCFGSicF0Bqe3bc1sXv" target="_blank" rel="noopener" tabindex="-1"><img src="../reading/covers/the-bad-good.png" alt="" loading="lazy" /></a>
+        <div class="m-text">
+          <h3 class="m-title">The Bad Good</h3>
+          <p>Comfort often has a funny way of disguising itself as good. It’s cozy and familiar, and well, usually completely uninspired.</p>
+          <a class="small m-more" href="https://www.therepublik.com/campaigns/view-campaign/Kr3EdNBxwacj-_D-F4C2CzWLHgOcqDIakOGnFhDgvcXyEjb5e2srTBj3oYriQJuUsxibMJjzwXm8_QCFGSicF0Bqe3bc1sXv" target="_blank" rel="noopener">More →</a>
+        </div>
+      </article>
+
+      <article class="m-item">
+        <p class="small m-meta">Newsletter</p>
+        <a class="m-media" href="https://www.therepublik.com/campaigns/view-campaign/O1B3wrXS8iaL2ezDwGqv3g0MpXq5QagGWAN8MB3skNBZiTSc-2feFCjm5godxadHG84BA_37GdJEAHlVogQSLvkcoFWNYOGb" target="_blank" rel="noopener" tabindex="-1"><img src="../reading/covers/the-quiet-engine.png" alt="" loading="lazy" /></a>
+        <div class="m-text">
+          <h3 class="m-title">The Quiet Engine</h3>
+          <p>We say strategy is a formula, but what does that really mean? It means no guesswork.</p>
+          <a class="small m-more" href="https://www.therepublik.com/campaigns/view-campaign/O1B3wrXS8iaL2ezDwGqv3g0MpXq5QagGWAN8MB3skNBZiTSc-2feFCjm5godxadHG84BA_37GdJEAHlVogQSLvkcoFWNYOGb" target="_blank" rel="noopener">More →</a>
+        </div>
+      </article>
+
+      <article class="m-item">
+        <p class="small m-meta">Newsletter</p>
+        <a class="m-media" href="https://www.therepublik.com/campaigns/view-campaign/syy4qq8wB-K05gZg7PLVYLfZw2njawXIytg8XRPR4_0Chd3VQMPU_6l7kOx6zUDjpdSbN_UWxjXl_1S8mgx8BxoMa3RQO4b3" target="_blank" rel="noopener" tabindex="-1"><img src="../reading/covers/built-to-last.png" alt="" loading="lazy" /></a>
+        <div class="m-text">
+          <h3 class="m-title">Built to Last</h3>
+          <p>It’s an honor to have decades of work still recognized after almost 25 years in business. And though we’ve had our share of ups and downs throughout, our spirit seldom faltered, so for this edition, we invite you to celebrate with us and take a trip down memory lane.</p>
+          <a class="small m-more" href="https://www.therepublik.com/campaigns/view-campaign/syy4qq8wB-K05gZg7PLVYLfZw2njawXIytg8XRPR4_0Chd3VQMPU_6l7kOx6zUDjpdSbN_UWxjXl_1S8mgx8BxoMa3RQO4b3" target="_blank" rel="noopener">More →</a>
+        </div>
+      </article>
+
+      <article class="m-item">
+        <p class="small m-meta">Newsletter</p>
+        <a class="m-media" href="https://www.therepublik.com/campaigns/view-campaign/cgyXFxv7mpm14K6peyG8EmADGCgZD0hg0OPaCW1onJPp2DhDa0vUKQ1oLB1OF2eo_Yfg_WAY3JVX8f7cYJX4W2cDHqopxSqU" target="_blank" rel="noopener" tabindex="-1"><img src="../reading/covers/boundaries-are-for-breaking.png" alt="" loading="lazy" /></a>
+        <div class="m-text">
+          <h3 class="m-title">Boundaries Are for Breaking</h3>
+          <p>While time always seems to move languidly in the heat, we’ve been using this rhythm to slow down and reflect on exciting ventures that are boiling in our pipeline. This season has breathed untouched energy into our work, refreshing us with new people and perspectives.</p>
+          <a class="small m-more" href="https://www.therepublik.com/campaigns/view-campaign/cgyXFxv7mpm14K6peyG8EmADGCgZD0hg0OPaCW1onJPp2DhDa0vUKQ1oLB1OF2eo_Yfg_WAY3JVX8f7cYJX4W2cDHqopxSqU" target="_blank" rel="noopener">More →</a>
+        </div>
+      </article>
+
+      <article class="m-item">
+        <p class="small m-meta">Newsletter</p>
+        <a class="m-media" href="https://www.therepublik.com/campaigns/view-campaign/K9nYlWsBTDOLPyFCmIo3Jt0zwYSDf7Z6P0cjTbyc0DI7zOTGXq2DN_g3noX3C8CVLGCR5SpWs5ggTXuWZVUCL3iypfB_8_mU" target="_blank" rel="noopener" tabindex="-1"><img src="../reading/covers/better-together.png" alt="" loading="lazy" /></a>
+        <div class="m-text">
+          <h3 class="m-title">Better Together</h3>
+          <p>Recent life-altering events brought reality to our collective doorsteps. And rather than talk about the marketing stuff our world usually revolves around, we’d like instead, to highlight our clients’ (current and former) good work they undertake as a natural reflection of who they are.</p>
+          <a class="small m-more" href="https://www.therepublik.com/campaigns/view-campaign/K9nYlWsBTDOLPyFCmIo3Jt0zwYSDf7Z6P0cjTbyc0DI7zOTGXq2DN_g3noX3C8CVLGCR5SpWs5ggTXuWZVUCL3iypfB_8_mU" target="_blank" rel="noopener">More →</a>
+        </div>
+      </article>
+
+      <article class="m-item">
+        <p class="small m-meta">Newsletter</p>
+        <a class="m-media" href="https://www.therepublik.com/campaigns/view-campaign/iBSwUx4fJeKA54gg2ojwk_wmImzMx6qESVUCGHQNqWgQq00SR1hWdEqTiCGXyck6hZKyJ64Oj_gthGTXBkyTEuWeddbWAgCL" target="_blank" rel="noopener" tabindex="-1"><img src="../reading/covers/stick-the-landing.png" alt="" loading="lazy" /></a>
+        <div class="m-text">
+          <h3 class="m-title">Stick the Landing</h3>
+          <p>We’ve officially entered the second half of the year and decade. And while it’s tempting to want to indulge in a halftime breather, deep down, we know better.</p>
+          <a class="small m-more" href="https://www.therepublik.com/campaigns/view-campaign/iBSwUx4fJeKA54gg2ojwk_wmImzMx6qESVUCGHQNqWgQq00SR1hWdEqTiCGXyck6hZKyJ64Oj_gthGTXBkyTEuWeddbWAgCL" target="_blank" rel="noopener">More →</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="m-section" aria-labelledby="m-press">
+      <h2 class="small m-label" id="m-press">Press releases</h2>
+
+      <article class="m-item">
+        <p class="small m-meta">Press release<br />Big Blood</p>
+        <a class="m-media is-doc" href="../reading/Big Blood -  In My Head PR.pdf" target="_blank" rel="noopener" tabindex="-1"><img src="../reading/thumbnails/11.jpg" alt="" loading="lazy" /></a>
+        <div class="m-text">
+          <h3 class="m-title">In My Head</h3>
+          <p>“In My Head” is Big Blood’s second single from their upcoming LP, First Aid Kit. It’s a powerful rock anthem deliberating the overpowering nature of an overwhelmed mind.</p>
+          <a class="small m-more" href="../reading/Big Blood -  In My Head PR.pdf" target="_blank" rel="noopener">More →</a>
+        </div>
+      </article>
+
+      <article class="m-item">
+        <p class="small m-meta">Press release<br />Lady Lamb</p>
+        <a class="m-media is-doc" href="../reading/Lady Lamb 10 Years PR.pdf" target="_blank" rel="noopener" tabindex="-1"><img src="../reading/thumbnails/6.jpg" alt="" loading="lazy" /></a>
+        <div class="m-text">
+          <h3 class="m-title">Lady Lamb 10 Year</h3>
+          <p>In the wake of her album retrospective shows that sold out within hours on Thursday, Lady Lamb is announcing the release of In The Mammoth Nothing Of The Night. The box set will include 5xLPs and 23 newly recorded songs from the time period of the original album.</p>
+          <a class="small m-more" href="../reading/Lady Lamb 10 Years PR.pdf" target="_blank" rel="noopener">More →</a>
+        </div>
+      </article>
+
+      <article class="m-item">
+        <p class="small m-meta">Press release<br />Lisel</p>
+        <a class="m-media is-doc" href="../reading/Lisel Blades Of Grass MV PR.pdf" target="_blank" rel="noopener" tabindex="-1"><img src="../reading/thumbnails/4.jpg" alt="" loading="lazy" /></a>
+        <div class="m-text">
+          <h3 class="m-title">Blades of Grass</h3>
+          <p>Today, Lisel releases the video for “Blades of Grass” off Patterns For Auto-Tuned Voices And Delay, which came out in February. In this experimental track, Lisel gracefully harmonizes multiple-tracked vocals, intertwining over a soft backing synth that gradually builds into a captivating and hypnotic rhythm.</p>
+          <a class="small m-more" href="../reading/Lisel Blades Of Grass MV PR.pdf" target="_blank" rel="noopener">More →</a>
+        </div>
+      </article>
+
+      <article class="m-item">
+        <p class="small m-meta">Press release<br />Lady Lamb</p>
+        <a class="m-media is-doc" href="../reading/Lady Lamb Crane Your Neck (Still Hungry Version) PR.pdf" target="_blank" rel="noopener" tabindex="-1"><img src="../reading/thumbnails/2.jpg" alt="" loading="lazy" /></a>
+        <div class="m-text">
+          <h3 class="m-title">Crane Your Neck</h3>
+          <p>Lady Lamb has reignited “Crane Your Neck,” the heart and soul of her 2013 album, Ripely Pine, which is being reissued with tons of additional newly-recorded tracks. “Crane Your Neck (Still Hungry Version)” was recorded live at Figure 8 Studios in Brooklyn, and showcases Aly Spaltro’s powerful, raw voice, while emphatically elevating the emotion of the song.</p>
+          <a class="small m-more" href="../reading/Lady Lamb Crane Your Neck (Still Hungry Version) PR.pdf" target="_blank" rel="noopener">More →</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="m-section" aria-labelledby="m-reviews">
+      <h2 class="small m-label" id="m-reviews">Music reviews</h2>
+
+      <article class="m-item">
+        <p class="small m-meta">Album review<br />Aug 20</p>
+        <a class="m-media is-doc" href="../reading/mlr.pdf" target="_blank" rel="noopener" tabindex="-1"><img src="../reading/thumbnails/9.jpg" alt="" loading="lazy" /></a>
+        <div class="m-text">
+          <h3 class="m-title">Kicking Away</h3>
+          <p>This record takes you out, spits in your eye, and drives home without you. With thundering organs, growling strings, and a gutting dissonance that’ll make your spine shiver, the explosive catharsis MXLX captures in Kicking Away is not for the faint of heart.</p>
+          <a class="small m-more" href="../reading/mlr.pdf" target="_blank" rel="noopener">More →</a>
+        </div>
+      </article>
+
+      <article class="m-item">
+        <p class="small m-meta">Album review<br />Jul 15</p>
+        <a class="m-media is-doc" href="../reading/wer.pdf" target="_blank" rel="noopener" tabindex="-1"><img src="../reading/thumbnails/10.jpg" alt="" loading="lazy" /></a>
+        <div class="m-text">
+          <h3 class="m-title">Eye Music</h3>
+          <p>In a jazz cycle about sight and higher understanding, Wendy Eisenberg, accompanied by five other musicians, showcases her undeniable experimental and classical string abilities. The piece’s rhythmic cycle flows with unexpected energy and flair, flaunting Eisenberg’s unique ear for novel sounds.</p>
+          <a class="small m-more" href="../reading/wer.pdf" target="_blank" rel="noopener">More →</a>
+        </div>
+      </article>
+    </section>
   </main>
+
+  <footer class="site-footer small">
+    <p>Georgie Ubben, Strategist</p>
+    <p>no puppies were harmed in the making of this website</p>
+  </footer>
 
   <script src="nav.js?v=3"></script>
 </body>
 </html>
-
