@@ -356,13 +356,6 @@ a {
   margin: 0;
 }
 
-.entry-rule {
-  height: 0;
-  margin: 20px 0 0;
-  border: 0;
-  border-top: var(--rule);
-}
-
 .entry-media {
   grid-area: media;
   align-self: start;
@@ -431,7 +424,7 @@ a {
 }
 
 /* ---------- Musings ---------- */
-/* Rows on the same four-column grid: label | image | title, teaser, More */
+/* Same two-column entries as the home page, grouped under small labels */
 
 .musings {
   padding: 0 var(--gutter) clamp(64px, 8vw, 128px);
@@ -447,7 +440,7 @@ a {
 }
 
 .m-section + .m-section {
-  margin-top: clamp(56px, 7vw, 112px);
+  margin-top: clamp(24px, 3vw, 48px);
 }
 
 .m-label {
@@ -456,72 +449,19 @@ a {
   border-top: var(--rule);
 }
 
-.m-item {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  column-gap: var(--gap);
-  align-items: start;
-  padding: clamp(24px, 3vw, 40px) 0;
+/* The label already draws the line above a section's first entry */
+.m-label + .entry {
+  border-top: 0;
 }
 
-.m-item + .m-item {
-  border-top: var(--rule);
-}
-
-.m-meta {
-  grid-column: 1;
-  margin: 0;
-}
-
-.m-media {
-  grid-column: 2;
-  display: block;
-}
-
-.m-media img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 3 / 2;
-  object-fit: cover;
-}
-
-.m-media.is-doc img {
-  object-position: center top;
-}
-
-.m-text {
-  grid-column: 3 / 5;
-  max-width: 34em;
-}
-
-.m-title {
-  margin: 0 0 14px;
-  font-family: var(--sans);
-  font-size: var(--head);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-}
-
-.m-text p {
-  margin: 0 0 14px;
+.m-more {
+  display: inline-block;
+  margin-top: 14px;
 }
 
 .m-more:hover,
 .m-more:focus-visible {
   text-decoration-line: underline;
-}
-
-@media (max-width: 760px) {
-  .m-item {
-    grid-template-columns: minmax(0, 1fr);
-    row-gap: 16px;
-  }
-
-  .m-meta,
-  .m-media,
-  .m-text {
-    grid-column: 1;
-  }
 }
 
 /* ---------- Case studies ---------- */
