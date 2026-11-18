@@ -12,6 +12,7 @@
   --small: 14px;                    /* labels, nav, contact */
   --body: clamp(17px, 1.3vw, 20px); /* serif copy */
   --rule: 1px solid var(--ink);
+  --hot-pink: #ec2a8d;
 }
 
 *,
@@ -200,6 +201,18 @@ a {
   letter-spacing: -0.02em;
 }
 
+/* Sentences that link down to their entry: pink on hover, and a pink wave
+   runs through them once after the page loads */
+.belief-link {
+  transition: color 0.35s ease;
+}
+
+.belief-link:hover,
+.belief-link:focus-visible,
+.belief-link.is-wave {
+  color: var(--hot-pink);
+}
+
 .mantra-label {
   margin-right: 1.4em;
   vertical-align: baseline;
@@ -300,6 +313,7 @@ a {
 }
 
 .entry {
+  scroll-margin-top: 16px;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: auto 1fr;
